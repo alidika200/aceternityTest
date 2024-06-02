@@ -1,0 +1,11 @@
+
+.card-cat{
+    margin-top: 100px;
+    margin-left: 30px;
+    color: white;
+  }
+  .popular{
+    display: flex;
+    flex-direction: row;
+    background: url('./images/witcher3.jpg') 100% / cover no-repeat;
+  }

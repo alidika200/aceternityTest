@@ -1,0 +1,97 @@
+.card{
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(21,32,44,255);
+    width: 200px;
+    height: 250px;
+}
+.pic{
+    border-radius: 22px;
+    background: url('./images/witcher3.jpg') 100% / cover no-repeat;
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 180px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.gameName{
+    font-size: 11px;
+    width: 200px;
+    margin-left: 20px;
+    color: white;
+}
+
+.categoryrow{
+  margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.category{
+    background-color: rgba(28,44,59,255);
+    border-radius: 22px;
+    width: 50px;
+    height: 16px;
+    color: #ffffff;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    font-size: 12px;
+    
+}
+
+.category2{
+    background-color: rgba(28, 44, 59, 255);
+    border-radius: 22px;
+    color: #ffffff;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px; /* Adjust padding as needed */
+    font-size: 12px;
+}
+.card-row{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .actions{
+      margin-top: 25px;
+        display: flex;
+     flex-direction: row;
+    
+  }
+  .rating{
+    background-color: rgb(5, 240, 173);
+    border-radius: 22px;
+    color: #ffffff;
+    width: 40px;
+   
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px; /* Adjust padding as needed */
+    font-size: 14px;
+  }
+  
+  
+  .buy{
+    background-color:#df49a6;
+    border-radius: 22px;
+    color: #ffffff;
+    width: 70px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px; /* Adjust padding as needed */
+    font-size: 14px;
+  }
+  
+  
