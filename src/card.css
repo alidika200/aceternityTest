@@ -8,7 +8,7 @@
 }
 .pic{
     border-radius: 22px;
-    background: url('./images/witcher3.jpg') 100% / cover no-repeat;
+    background: 100% / cover no-repeat;
     margin-left: 10px;
     margin-top: 15px;
     width: 180px;

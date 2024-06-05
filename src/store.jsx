@@ -8,7 +8,7 @@ import Header from './Layout';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
-const store = () => {
+const Store = () => {
   
   return (
    <> 
@@ -94,7 +94,7 @@ const store = () => {
   
 };
 
-export default store;
+export default Store;
 
 
 
