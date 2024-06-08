@@ -21,6 +21,12 @@ const GameForm = () => {
             <label htmlFor="developer">Developer</label>
             <input type="text" id="developer" name="developer" />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="developer">Category</label>
+            <input type="text" id="developer" name="developer" />
+          </div>
+
           <div className="form-group">
             <label htmlFor="description">Description</label>
             <textarea id="description" name="description"></textarea>
@@ -37,13 +43,19 @@ const GameForm = () => {
         </div>
         <div className="right-column">
           <div className="form-group">
-            <label htmlFor="picture">Picture</label>
+            <label htmlFor="picture">Game Icon</label>
             <input type="file" id="picture" name="picture" accept="image/*" />
           </div>
           <div className="form-group">
             <label htmlFor="banner">Banner</label>
             <input type="file" id="banner" name="banner" accept="image/*" />
           </div>
+
+          <div className="form-group">
+            <label htmlFor="banner">Game Media</label>
+            <input type="file" id="banner" name="banner" accept="image/*" />
+          </div>
+
           <div className="form-group">
             <label htmlFor="trailer">Trailer Link</label>
             <input type="url" id="trailer" name="trailer" />

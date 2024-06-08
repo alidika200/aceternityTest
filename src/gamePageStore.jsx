@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './gamePageLibrary.css';
+import './gamePageStore.css';
 import profilePic from './assets/shitpost.jpg';
 import Header from './Layout';
 import DropdownMenu from './dropDownMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
-const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, datePlayed, totalHours, numberOfTournaments, tournamentImage, tournamentDesc }) => {
+const GamePageStore = ({ backgroundImage, gameName, studioName, Description, releaseDate,  systemRequirments,review, userImage, userReview }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, d
             </div>
             <div className="playButton">
               <button className="play">Play</button>
-              <button className="more" onClick={() => setOpenMenu((prev) => !prev)}>More</button>
+              {/* <button className="more" onClick={() => setOpenMenu((prev) => !prev)}>More</button> */}
             </div>
           </div>
         </div>
@@ -79,4 +79,4 @@ const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, d
   );
 };
 
-export default GamePageLibrary;
+export default GamePageStore;

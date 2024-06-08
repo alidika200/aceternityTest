@@ -5,13 +5,22 @@ import Card from './card';
 import Store from './store';
 import GamePageLibrary from './gamePageLibrary';
 import witcher3image from './assets/witcher3.jpg';
-import tournamentimage from './assets/logo1.png' 
+import division from './assets/download.jpg'
+import helldivers from './assets/helldivers.jpg';
+import tournamentimage from './assets/logo1.png' ;
 import GameForm from './addGameForn';
+import CarouselComponent from './CarouselComponent';
+import { HdRounded } from '@mui/icons-material';
 
 function App() {
   return (
     <>
+{/* <Store></Store> */}
 
+    
+
+
+{/* <GameForm></GameForm>  */}
 
 
         <GamePageLibrary backgroundImage = {witcher3image} gameName="The Witcher 3: Wild Hunt" studioName="Cd Project Red"

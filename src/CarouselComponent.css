@@ -1,0 +1,124 @@
+.carousel {
+  max-width: 700px; /* Set the max width to the width of the slides */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel .slide {
+  background: none;
+  margin: 0 auto; /* Center each slide */
+}
+
+.carousel-slide {
+  position: relative;
+  text-align: left;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  width: 700px; /* Set the width of each slide */
+  height: 280px; /* Set the height of each slide */
+  border-radius: 10px;
+}
+
+.carousel .carousel-slider {
+  overflow: hidden;
+}
+
+.carousel .control-dots {
+  bottom: 10px; /* Adjust the bottom position of the dots if needed */
+  width: 100%; /* Ensure dots are centered within the carousel */
+  text-align: center; /* Center the dots */
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Ensure the caption takes the full height of the slide */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.carousel-caption p {
+  margin: 5px 0;
+}
+
+.dlc-notice {
+  font-size: 18px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.highlight {
+  color: orange;
+}
+
+.buy-now-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.buy-now-btn1 {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.buy-now-btn2 {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.buy-now-btn3 {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+
+.buy-now-btn:hover {
+  background-color: darkorange;
+}
+
+.carousel-caption .game-info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.carousel.control-arrow {
+  display: none !important;
+}
+
+.carousel.control-dots {
+  display: none !important;
+}

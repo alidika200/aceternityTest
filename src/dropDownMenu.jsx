@@ -8,12 +8,12 @@ return(
     <>
     <div className="dropdownMenu">
               <ul>
-                <li>Store Page</li>
-                <li>Create Tournamnet</li>
-                <li>Game Website 3</li>
-                <li>Game Community</li>
-                <li>Add to favorites</li>
-                <li>Remove Game</li>
+                <li><a href="#">Store Page</a></li>
+                <li><a href="#">Create Tournamnet</a></li>
+                <li><a href="#">Game Website </a></li>
+                <li><a href="#">Game Community</a></li>
+                <li><a href="#">Add to favorites</a></li>
+                <li><a href="#">Remove Game</a></li>
               </ul>
  </div>
 </>
