@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './gamePageLibrary.css';
-import profilePic from './assets/shitpost.jpg'
+import profilePic from './assets/shitpost.jpg';
 import Header from './Layout';
+import DropdownMenu from './dropDownMenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const GamePageLibrary = ({backgroundImage, gameName,studioName,Description,datePlayed,totalHours,numberOfTournaments,tournamentImage,tournamentDesc}) => {
 
+ 
+
   return(
   <>
   <Header playerName ="Ali"
-   backgroundImage = {profilePic}/> 
+   backgroundImage = {profilePic}  /> 
 
- <div className='mainCard'>
+ <div className='mainCard' >
     <div className="gameCard" style={{ backgroundImage: `url(${backgroundImage})` }} >
       <div className="gameOptions" >
         <div className="name-studio">
@@ -21,9 +26,12 @@ const GamePageLibrary = ({backgroundImage, gameName,studioName,Description,dateP
         <div className="playButton">
           <button className="play">Play</button>
           <button className="more">More</button>
+          <DropdownMenu></DropdownMenu>
+
         </div>
       </div>
     </div>
+    
     <div className="disc-info">
       <div className="disc">
         <p className="description">Description</p>
@@ -56,13 +64,17 @@ const GamePageLibrary = ({backgroundImage, gameName,studioName,Description,dateP
       </div>
 
       <div className="Review">
+      <label htmlFor="description">Review</label>
       <div className="rev">
-        <div className="revForm"></div>
-        
+      <form>
+      <textarea className='rev-box' id="description" name="description"></textarea>
+      </form>
         <div className="submit">
-          <button className="up"></button>
-          <button className="down"></button>
-          <button className="post"></button>
+          <div className='rate'>
+          <button className="up"><FontAwesomeIcon icon="fa-solid fa-thumbs-down" /></button>
+          <button className="down"> <FontAwesomeIcon icon="fa-solid fa-thumbs-down" /> </button>
+          </div>
+          <button className="post">Post</button>
         </div>
         </div>
       </div>

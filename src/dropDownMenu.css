@@ -1,0 +1,17 @@
+.dropdownMenu{
+    position: absolute;
+    /* top: 4.5rem;
+    right: 1.5rem; */
+    width: 120px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    border: 1px solid gray;
+    z-index: 1000;
+    list-style-type: none;
+}
+
+.dropdownMenu #li{
+    list-style-type: none;
+    
+}
