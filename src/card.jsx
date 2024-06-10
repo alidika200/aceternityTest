@@ -6,7 +6,7 @@ const Card = ({ gameName, categories, backgroundImage }) => {
   return (
     <div className="card">
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
-        <p className="gameName" style={{ color: 'white' }}>{gameName}</p>
+        <p className="gameName20" style={{ color: 'white' }}>{gameName}</p>
         <div className="categoryrow">
             {categories.map((category, index) => (
                 <div key={index} className={`category ${index === 0 ? 'category' : 'category2'}`}>

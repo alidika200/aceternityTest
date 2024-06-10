@@ -8,7 +8,15 @@ import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, datePlayed, totalHours, numberOfTournaments, tournamentImage, tournamentDesc }) => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [reviews, setReviews] = useState([]); // Initialize reviews state
 
+  // Function to handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    const newReview = document.getElementById("description").value; // Get the review text
+    setReviews([...reviews, newReview]); // Update the reviews state
+    document.getElementById("description").value = ''; // Clear the textarea
+  };
   return (
     <>
       <Header playerName="Ali" backgroundImage={profilePic} />

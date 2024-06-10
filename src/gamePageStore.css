@@ -1,237 +1,224 @@
-.mainCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-
-
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    background-Size: cover;
-    background-position: center;
-    min-height: 100vh;
-    width: 100v;
-    padding: 20px; */
- 
+.mainCardstore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
-.gameCard {
-    width: 900px;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 30px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Ensure the .gameOptions stays at the bottom */
-    position: relative;
-    padding: 0; /* Remove padding to ensure the background image covers the whole card */
+.gameCardstore {
+  width: 900px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px; /* Add margin to push down the next section */
 }
 
-.gameOptions {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* White background with lowered opacity */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    position: absolute; /* Position at the bottom of the .gameCard */
-    bottom: 0;
+.name-studioStore {
+  margin: 0;
 }
 
-.name-studio {
-    margin: 0; /* Remove margin to ensure it aligns with the buttons */
+.name-studioStore p {
+  margin: 0;
+  color: #c52424;
 }
 
-.name-studio p {
-    margin: 0;
-    color: #c52424;
+.name-studioStore .gameNameStore {
+  font-size: 25px;
+  color: black;
 }
 
-.name-studio .gameName {
-    font-size: 25px;
-    color: black;
-    white-space: nowrap; /* Prevent text from wrapping onto the next line */
+.name-studioStore .studioNameStore {
+  font-size: 15px;
+  color: black;
 }
 
-.name-studio .studioName {
-    font-size: 15px;
-    color: black;
+.playButtonStore
+ {
+  align-self: flex-end;
 }
 
-.playButton {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 
-.playButton button {
-    width: 90px;
-    height: 40px;
-    border: none;
-    background-color: rgba(255, 255, 255);
-    cursor: pointer;
-    border-radius: 15px;
+.playButtonStore button {
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: rgba(255, 255, 255);
+  cursor: pointer;
+  border-radius: 15px;
 }
 
-.disc-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 900px; /* Match the width of .gameCard */
-    gap: 30px; /* Add space between the two cards */
-    margin-top: 20px;
+.phrase {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-.disc, .info, .tournament, .Review {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.gallery {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.disc {
-    height: 200px;
-    width: 700px;
+.card {
+  width: 250px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-.disc-card p{
-    font-size: 17px;
+.Trailer {
+  margin-top: 20px;
+  width: 900px;
+  height: 400px;
 }
 
+.card-column {
+  flex: 1; /* Allow them to take remaining space */
+  max-width: 900px; /* Limit their width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add space between items */
+}
+
+.discriptionCardStore,
 .info {
-    height: 200px;
+  width: 100%; /* Adjust width to take full width */
 }
 
-.description, .information {
-    font-weight: bold;
-    margin-bottom: 10px;
+.discStore,
+.infoStore,
+.system-req,
+.price {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure full width within the container */
 }
 
+.discStore {
+  height: auto; /* Allow height to expand based on content */
+}
+
+.disc-cardStore p {
+  font-size: 17px;
+}
+
+.information,
+.requirements,
+.description {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.req-card ul,
+.price-card ul,
 .info-card ul {
-    list-style-type: none; 
-    padding-left: 2px; 
-    font-size: 13px;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 13px;
 }
 
+.req-card ul li,
+.price-card ul li,
 .info-card ul li {
-    margin-bottom: 10px; /
-}
-
-.tournament {
-    margin-top: 20px;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space out the content */
-}
-
-.tours {
-    display: flex;
-    flex-direction: row; /* Arrange image and description side by side */
-    align-items: center; /* Align items vertically in the center */
-    margin-bottom: 10px; /* Add some space between tours and the button */
-}
-
-.tours .image {
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 30px;
-    margin-right: 10px; /* Add some space between image and description */
-}
-
-.tours-disc {
-    flex-grow: 1; /* Allow the description to take up the remaining space */
-}
-
-.enroll {
-    align-self: flex-end; /* Align the button to the bottom right */
-    color: #fff;
-    width: 90px;
-    height: 40px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 15px;
-}
-.Review{
-    align-items: center;
-    margin-top: 20px ;
-    width: 600px;
-}
-
-
-
-.place{
-    align-items: center;
-}
-.rev{align-items: center;
-
+  margin-bottom: 10px;
 }
 
 .Review {
-    text-align: center;
-    margin-top: 20px;
+  width: 900px;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tournament{
+  background-color: gray;
+}
+
+.Review .tours {
+  /* display: flex; */
+  /* align-items: center; */
+  margin-bottom: 10px;
+}
+
+.Review .tours .image {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.Review .tours-disc {
+ 
+}
+
+.submit {
+margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rate {
+  display: flex;
+  gap: 10px;
+}
+
+button.up,
+button.down {
+  color: #fff;
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 15px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+
+@media (max-width: 960px) {
+  .mainCard {
+    margin: 10px;
   }
-  
-  .rev {
-    display: flex;
+
+  .gameCard {
+    width: 100%;
+  }
+
+  .row {
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .rev-box {
-    width: 400px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
-    box-sizing: border-box;
-    resize: none;
-    margin-bottom: 20px;
-  }
-  
-  .submit {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-
-  .rate{
-    margin-right: 300px;
   }
 
-  button.up, button.down {
-    color:#fff;
-    width: 90px;
-    height: 40px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 15px;
-    flex: 1;
-    margin-right: 10px;
-  }
-  
-  button.post {
-    color:#fff;
-    width: 90px;
-    height: 40px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 15px;
+  .card-column {
+    width: 100%;
+    max-width: 100%; /* Adjust to full width */
   }
 
-
-  .dropdownMenu{
-    position: absolute;
+  .disc-info,
+  .info {
+    width: 100%; /* Adjust to full width */
   }
+}

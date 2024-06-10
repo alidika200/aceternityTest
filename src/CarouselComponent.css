@@ -56,6 +56,9 @@
 .highlight {
   color: orange;
 }
+.highlight1 {
+  color: rgb(255, 0, 0);
+}
 
 .buy-now-btn {
   background-color: orange;

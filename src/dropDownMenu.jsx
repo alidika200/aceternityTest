@@ -13,6 +13,7 @@ return(
                 <li><a href="#">Game Website </a></li>
                 <li><a href="#">Game Community</a></li>
                 <li><a href="#">Add to favorites</a></li>
+                <li><a href="#"> Stats</a></li>
                 <li><a href="#">Remove Game</a></li>
               </ul>
  </div>

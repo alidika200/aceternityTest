@@ -18,10 +18,10 @@ const Store = () => {
    backgroundImage = {profilePic}/> 
 
 
-<div className='gg1'>
+{/* <div className='gg1'>
 
-<CarouselComponent game1="The Witcher 3 Wild HuntThe Witcher 3 Wild Hunt"game2="Tom Clancy's the Division 2" game3="Hell Divers"  phrase2="" phrase3="" image1={witcher3image} image2={division} image3={helldiver} />
-</div>
+<CarouselComponent game1="The Witcher 3 Wild Hunt"game2="Tom Clancy's the Division 2" game3="Hell Divers"  phrase2="" phrase3="" image1={witcher3image} image2={division} image3={helldiver} />
+</div> */}
 
       <p className='card-cat' >Online Only Games</p>
 

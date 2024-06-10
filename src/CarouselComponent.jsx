@@ -19,9 +19,9 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
         <div className="carousel-caption">
           <div className="game-info">
             <h3>{game1}</h3>
-            <p>Ubisoft, Massive</p>
+            <p>Cd Project Red</p>
           </div>
-          <p className="dlc-notice">New <span className="highlight">DLC</span> Arrived</p>
+          <p className="dlc-notice">Steel For Humans, Silver for  <span className="highlight1">Monsters</span></p>
           <button className="buy-now-btn1">Buy Now</button>
         </div>
       </div>
@@ -29,7 +29,7 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
         <div className="carousel-caption">
           <div className="game-info">
             <h3>{game2}</h3>
-            <p>Cd Project Red</p>
+            <p>Ubisoft, Massive</p>
           </div>
           <p className="dlc-notice">New <span className="highlight">DLC</span> Arrived</p>
           <button className="buy-now-btn2">Buy Now</button>
