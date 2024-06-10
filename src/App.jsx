@@ -22,7 +22,7 @@ function App() {
       price="60$" Description="Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Project "
        releaseDate="5/6/2024" category="Action" steam="80$" epic="65$" gog="75$" cpu="Intel Core i5 7750k"
        gpu="Nvidia RTX 4090" ram="32" review="Good" userImage={profilePic} userReview="it is a very good game"
-       image1={division} image2={witcher3image} image3={helldivers} trailer="https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta" /> */}
+       image1={division} image2={witcher3image} image3={helldivers} trailer="https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta" /> 
 {/* <Store></Store>
 
 {/* <GameForm></GameForm>  */}
