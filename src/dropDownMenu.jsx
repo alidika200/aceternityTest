@@ -2,8 +2,6 @@ import React from "react"
 import './dropDownMenu.css'
 
 const DropdownMenu = () =>{
-
-
 return(
     <>
     <div className="dropdownMenu">

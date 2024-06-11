@@ -5,6 +5,7 @@ import Header from './Layout';
 import DropdownMenu from './dropDownMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import SideNav from './dropDownNavBar';
 
 const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, datePlayed, totalHours, numberOfTournaments, tournamentImage, tournamentDesc }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -20,6 +21,8 @@ const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, d
   return (
     <>
       <Header playerName="Ali" backgroundImage={profilePic} />
+
+      <SideNav></SideNav>
 
       <div className='mainCard'>
         <div className="gameCard" style={{ backgroundImage: `url(${backgroundImage})` }}>

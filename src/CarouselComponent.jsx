@@ -16,8 +16,9 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
       renderArrowNext={() => null}
     >
       <div className="carousel-slide" style={{ backgroundImage: `url(${image1})` }}>
+      
         <div className="carousel-caption">
-          <div className="game-info">
+          <div className="game-info3">
             <h3>{game1}</h3>
             <p>Cd Project Red</p>
           </div>
@@ -27,7 +28,7 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
       </div>
       <div className="carousel-slide" style={{ backgroundImage: `url(${image2})` }}>
         <div className="carousel-caption">
-          <div className="game-info">
+          <div className="game-info3">
             <h3>{game2}</h3>
             <p>Ubisoft, Massive</p>
           </div>
@@ -37,7 +38,7 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
       </div>
       <div className="carousel-slide" style={{ backgroundImage: `url(${image3})` }}>
         <div className="carousel-caption">
-          <div className="game-info">
+          <div className="game-info3">
             <h3>{game3}</h3>
             <p>Sony</p>
           </div>
