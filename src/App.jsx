@@ -13,33 +13,22 @@ import GamePageLibrary from './gamePageLibrary';
 import GamePageStore from './gamePageStore';
 import Post from './postComponent';
 import { HdRounded } from '@mui/icons-material';
-
+import SideNav from './dropDownNavBar';
+import LibraryCarousel from './libraryCarousel';
 function App() {
   return (
-    <>
+   <>
+   <Store></Store>
 
+{/* <LibraryCarousel></LibraryCarousel> */}
 
-{/* <Post userImage={profilePic} userName="Ali" mediaUrl={witcher3image} postText="awoipdjwwaiojdiowajdiwa" /> */}
-
-<Store></Store>
-
-{/* 
-<GamePageStore  backgroundImage = {witcher3image} gameName="The Witcher 3: Wild Hunt" studioName="Cd Project Red"
-      price="60$" Description="Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Project "
-       releaseDate="5/6/2024" category="Action" steam="80$" epic="65$" gog="75$" cpu="Intel Core i5 7750k"
-       gpu="Nvidia RTX 4090" ram="32" review="Good" userImage={profilePic} userReview="it is a very good game"
-       image1={division} image2={witcher3image} image3={helldivers} trailer="https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta" /> */}
-
-       {/* <GameForm></GameForm> */}
-
-
-         {/* <GamePageLibrary backgroundImage = {witcher3image} gameName="The Witcher 3: Wild Hunt" studioName="Cd Project Red"
-       Description="Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Project "
-       datePlayed="5/6/2024" totalHours="132 hours" numberOfTournaments="18" tournamentImage={tournamentimage} tournamentDesc="awijdioawjdowajdiowajdiowaiod"/>   */}
-
-
-   </> 
- );
+    {/* <GamePageStore  backgroundImage = {witcher3image} gameName="The Witcher 3: Wild Hunt" studioName="Cd Project Red"
+     price="60$" Description="Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Project "
+     releaseDate="5/6/2024" category="Action" steam="80$" epic="65$" gog="75$" cpu="Intel Core i5 7750k"
+     gpu="Nvidia RTX 4090" ram="32" review="Good" userImage={profilePic} userReview="it is a very good game"
+      image1={division} image2={witcher3image} image3={helldivers} trailer="https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta" /> */}
+    </>
+  );
 }
 
 export default App;

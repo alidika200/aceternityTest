@@ -11,7 +11,7 @@ import { styled } from '@mui/system';
 import { CssTransition } from '@mui/base/Transitions';
 import { PopupContext } from '@mui/base/Unstable_Popup'
 
-const Header = ({playerName, backgroundImage}) => {
+const Header = ({playerName,  backgroundImage }) => {
 
 
   return (
