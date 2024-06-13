@@ -13,8 +13,8 @@ const Post = ({ userImage, userName, postText, mediaUrl }) => {
       <div className="postCard">
         <div className="postContent">
           <div className="postHeader">
-            <div className="postImageUser" style={{ backgroundImage: `url(${userImage})` }}></div>
-            <div className="userName">{userName}</div>
+            <div  className="postImageUser" style={{ backgroundImage: `url(${userImage})` }}></div>
+            <div className="userName"> <a href='#'>{userName}</a></div>
           </div>
           <p className="postText">{postText}</p>
           {mediaUrl && (

@@ -16,7 +16,7 @@ const Header = ({playerName,  backgroundImage }) => {
 
   return (
     <header className="header-design">
-      <h3 className="Logo">GAME PEDIA </h3>
+      <h3 className="Logo">GAMEPEDIA </h3>
       <h3 className="greetings">Good Day {playerName}</h3>
       <div className="options">
    

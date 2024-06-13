@@ -7,9 +7,8 @@ import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import ReactPlayer from 'react-player';
 import SideNav from './dropDownNavBar';
 
-const GamePageStore = ({ backgroundImage, gameName, studioName, price, Description, releaseDate, category,  
-  steam, epic, gog, cpu, gpu, ram, review, userImage, userReview, image1, image2, image3, trailer }) => {
-  
+const GamePageStore = ({gameName,studioName, backgroundImage, price, Description, releaseDate, category, steam, epic, gog, cpu, gpu, ram, review, userImage, userReview, image1, image2, image3, trailer}) => {
+
   const images = [image1, image2, image3];
 
   return (
@@ -21,7 +20,7 @@ const GamePageStore = ({ backgroundImage, gameName, studioName, price, Descripti
         <div className="gameCardstore" style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className="name-studioStore">
             <p className="gameNameStore">{gameName}</p>
-            <p className="studioNameStore">{studioName}</p>
+            <p className="studioNameStore">{studioName}</p> 
           </div>
           <div className="playButtonStore">
             <button className="playStore">{price}</button>
@@ -103,7 +102,6 @@ const GamePageStore = ({ backgroundImage, gameName, studioName, price, Descripti
                 </div>
               </div>
             </div>
-            
             
           ))}
         </div>

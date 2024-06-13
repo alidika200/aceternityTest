@@ -7,7 +7,6 @@ import division from './assets/download.jpg'
 import profilePic from './assets/shitpost.jpg'
 import Header from './Layout';
 import CarouselComponent from './CarouselComponent';
-import { BrowserRouter as Router } from 'react-router-dom';
 import SideNav from './dropDownNavBar';
 
 
@@ -28,11 +27,22 @@ const Store = () => {
       <p className='card-cat' >Online Only Games</p>
 
      <div className="card-row">
-      <Card 
-        gameName="The Witcher 3 Wild Hunt"
+      {/* <Card 
+        gameName="The Witcher 3 Wild Hunt" studioName="Cd Prject red"
         categories={['Action', 'Fantasy']} 
-        backgroundImage={witcher3image}
+        backgroundImage={witcher3image} price="60" Description="Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Project "
+        releaseDate="5/6/2024" category="Action" steam="80$" epic="65$" gog="75$" cpu="Intel Core i5 7750k"
+        gpu="Nvidia RTX 4090" ram="32" review="Good" userImage={profilePic} userReview="it is a very good game"
+         image1={division} image2={witcher3image} image3={helldiver} trailer="https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta" 
+      /> */}
+
+<Card 
+        gameName="Hell Divers 2" 
+        categories={['Adventure', 'RPG']} 
+        backgroundImage={helldiver}
       />
+
+
       <Card 
         gameName="Hell Divers 2" 
         categories={['Adventure', 'RPG']} 
@@ -81,7 +91,7 @@ const Store = () => {
 <Card 
     gameName="The Witcher 3 Wild Hunt"
     categories={['Action', 'Fantasy']} 
-    backgroundImage={witcher3image}
+    backgroundImage={witcher3image} price="60"
   />
   <Card 
     gameName="Hell Divers 2" 
@@ -105,6 +115,5 @@ const Store = () => {
 };
 
 export default Store;
-
 
 

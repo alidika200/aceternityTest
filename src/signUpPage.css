@@ -1,0 +1,142 @@
+.outside-wrapper {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./assets/wallpaperspace.jpg'); /* Set the background image for the entire wrapper */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100vw;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginali {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wowcontainer {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 700px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability */
+}
+
+.wowform-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ccc;
+}
+
+.wowform-container form {
+    width: 100%;
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.wowform-container input,
+.wowform-container button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.wowform-container button {
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.animation-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+}
+
+.character {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: inherit;
+}
+
+@keyframes animateCharacter1 {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%, 25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30%, 45% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    55%, 70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80%, 95% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes animateCharacter2 {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%, 25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30%, 45% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    55%, 70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80%, 95% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.animateCharacter1 {
+    animation-name: animateCharacter1;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+.animateCharacter2 {
+    animation-name: animateCharacter2;
+    animation-duration: 30s;
+    animation-delay: 30s;
+    animation-iteration-count: infinite;
+}

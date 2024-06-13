@@ -1,105 +1,130 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Tooltip } from 'antd';
+import './dropDownNavBar.css';
 import {
   AppstoreOutlined,
-  ContainerOutlined,
-  DesktopOutlined,
-  MailOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   PieChartOutlined,
   HomeOutlined,
-  ShoppingOutlined,StarOutlined,
+  ShoppingOutlined,
+  StarOutlined,
   TeamOutlined,
 } from '@ant-design/icons';
 import { Menu } from 'antd';
 
-const items = [
-  {
-    key: '1',
-    icon: <HomeOutlined />,
-    label: 'Feed',
-  },
-  {
-    key: '3',
-    icon: <ShoppingOutlined />,
-    label: 'Store',
-  },
-  {
-    key: '4',
-    icon: <AppstoreOutlined />,
-    label: 'Library',
-  },
-  {
-    key: '5',
-    icon: <StarOutlined />,
-    label: 'Tournamnets',
-  },
-  {
-    key: '6',
-    icon: <TeamOutlined />,
-    label: 'Freinds',
-  },
-  {
-    key: '2',
-    icon: <PieChartOutlined />,
-    label: 'Dash Board',
-  },
-
-];
-
 const SideNav = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const [selectedKey, setSelectedKey] = useState('1');
+  const location = useLocation();
+  
+  // Determine initial selected key based on current location
+  const initialSelectedKey = () => {
+    switch (location.pathname) {
+      case '/feed':
+        return '1';
+      case '/store':
+        return '3';
+      case '/library':
+        return '4';
+      case '/tournaments':
+        return '5';
+      case '/friends':
+        return '6';
+      case '/dashboard':
+        return '2';
+      default:
+        return '1';
+    }
+  };
+
+  const [selectedKey, setSelectedKey] = useState(initialSelectedKey);
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
 
   const handleMenuClick = (e) => {
-    setSelectedKey(e.key);
+    setSelectedKey(e.key); // Update the selected key based on the clicked menu item
   };
 
   return (
     <div
       style={{
         position: 'fixed',
-        width:  72,
+        width: 72,
         left: 0,
         marginTop: 80,
         overflowY: 'auto',
         borderRadius: 15,
         zIndex: 1000,
         transition: 'width 0.3s ease',
-       
       }}
     >
       <Menu
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
         mode="inline"
         theme="dark"
         inlineCollapsed={collapsed}
-        onClick={handleMenuClick}
-        selectedKeys={[selectedKey]}
+        onClick={handleMenuClick} // Handle click event to update selected key
+        selectedKeys={[selectedKey]} // Dynamically set selected keys based on state
         style={{
-         backgroundColor:'inherit'
-          
+          backgroundColor: 'inherit',
         }}
       >
-        {items.map(item => (
-          <Menu.Item key={item.key}>
-            <Tooltip title={item.label} placement="right">
-              {item.icon}
+        <Menu.Item key="1">
+            <Tooltip title="Feed" placement="right">
+          <Link to="/feed">
+
+              <HomeOutlined />
+          </Link>
+
             </Tooltip>
-          </Menu.Item>
-        ))}
+        </Menu.Item>
+        
+        <Menu.Item key="3">
+            <Tooltip title="Store" placement="right">
+          <Link to="/store">
+
+              <ShoppingOutlined />
+          </Link>
+
+            </Tooltip>
+        </Menu.Item>
+       
+        <Menu.Item key="4">
+            <Tooltip title="Library" placement="right">
+          <Link to="/library">
+
+              <AppstoreOutlined />
+              
+              </Link>
+
+            </Tooltip>
+        </Menu.Item>
+        <Menu.Item key="5">
+
+            <Tooltip title="Tournaments" placement="right">
+          <Link to="/tournaments">
+              <StarOutlined />
+              </Link>
+            </Tooltip>
+        </Menu.Item>
+        <Menu.Item key="6">
+            <Tooltip title="Friends" placement="right">
+          <Link to="/friends">
+              <TeamOutlined />
+          </Link>
+            </Tooltip>
+        </Menu.Item>
+        <Menu.Item key="2">
+          
+            <Tooltip title="Dashboard" placement="right">
+            <Link to="/dashboard">
+              <PieChartOutlined />
+              </Link>
+            </Tooltip>
+          
+        </Menu.Item>
       </Menu>
-      <style jsx global>{`
-        .ant-menu-item-selected {
-          background-color: #4321ed !important; 
-        }
-      `}</style>
+    
     </div>
   );
 };

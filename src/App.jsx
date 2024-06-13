@@ -1,4 +1,5 @@
 import React from 'react';
+
 import profilePic from './assets/shitpost.jpg'
 import Header from './Layout';
 import Card from './card';
@@ -15,22 +16,58 @@ import Post from './postComponent';
 import { HdRounded } from '@mui/icons-material';
 import SideNav from './dropDownNavBar';
 import LibraryCarousel from './libraryCarousel';
+import Feed from './feed';
+import SignUp from './SignUpPage';
+import Home from './home';
+import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+
+
+
+
+
 function App() {
+
+  const gamePageStoreData = {
+    gameName: "The Witcher 3 Wild Hunt",
+    studioName: "CD Projekt Red",
+    backgroundImage: witcher3image,
+    price: "60$",
+    Description: "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt",
+    releaseDate: "5/6/2024",
+    category: "Action",
+    steam: "80$",
+    epic: "65$",
+    gog: "75$",
+    cpu: "Intel Core i5 7750k",
+    gpu: "Nvidia RTX 4090",
+    ram: "32",
+    review: "Good",
+    userImage: profilePic,
+    userReview: "It is a very good game",
+    image1: division,
+    image2: witcher3image,
+    image3: helldivers,
+    trailer: "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
+  };
   return (
-   <>
-   <Store></Store>
 
-{/* <LibraryCarousel></LibraryCarousel> */}
-
-    {/* <GamePageStore  backgroundImage = {witcher3image} gameName="The Witcher 3: Wild Hunt" studioName="Cd Project Red"
-     price="60$" Description="Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Project "
-     releaseDate="5/6/2024" category="Action" steam="80$" epic="65$" gog="75$" cpu="Intel Core i5 7750k"
-     gpu="Nvidia RTX 4090" ram="32" review="Good" userImage={profilePic} userReview="it is a very good game"
-      image1={division} image2={witcher3image} image3={helldivers} trailer="https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta" /> */}
-    </>
+    
+    <BrowserRouter>
+<Routes>
+  <Route exact path="/" element={<Home/>}/>
+  <Route  path="/feed" element={<Feed/>}/>
+  <Route  path="/store" element={<Store/>}/>
+  <Route  path="/library" element={<LibraryCarousel/>}/>
+  <Route path="/storePage" element={<GamePageStore {...gamePageStoreData} />} />
+  <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
+  <Route  path="/profile" element={<GameForm/>}/>
+  <Route  path="/checkout" element={<GameForm/>}/>
+  <Route  path="/logIn" element={<SignUp/>}/>
+ </Routes>
+ </BrowserRouter>
   );
 }
-
 export default App;
 
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './CarouselComponent.css';
+import { Link } from 'react-router-dom';
+
 
 const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2, image3 }) => {
   return (
@@ -23,7 +25,9 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
             <p>Cd Project Red</p>
           </div>
           <p className="dlc-notice">Steel For Humans, Silver for  <span className="highlight1">Monsters</span></p>
+          <Link to="/storePage">
           <button className="buy-now-btn1">Buy Now</button>
+            </Link>
         </div>
       </div>
       <div className="carousel-slide" style={{ backgroundImage: `url(${image2})` }}>
@@ -33,7 +37,9 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
             <p>Ubisoft, Massive</p>
           </div>
           <p className="dlc-notice">New <span className="highlight">DLC</span> Arrived</p>
+          <Link to="/storePage">
           <button className="buy-now-btn2">Buy Now</button>
+          </Link>
         </div>
       </div>
       <div className="carousel-slide" style={{ backgroundImage: `url(${image3})` }}>
@@ -43,7 +49,9 @@ const CarouselComponent = ({game1,game2,game3,phrase2 ,phrase3,  image1, image2,
             <p>Sony</p>
           </div>
           <p className="dlc-notice">New <span className="highlight">DLC</span> Arrived</p>
+          <Link to="/storePage">
           <button className="buy-now-btn3">Buy Now</button>
+          </Link>
         </div>
       </div>
     </Carousel>

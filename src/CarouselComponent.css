@@ -38,10 +38,10 @@
 }
 
 .carousel-caption h3 {
-  background-color: rgba(255, 255, 255, 0.3);
-  /* color: ; */
-  backdrop-filter: blur(20px);
+ 
   margin: 0;
+  border-radius: 15px;
+  width: 400px;
   font-size: 24px;
 }
 
@@ -50,8 +50,7 @@
 }
 
 .dlc-notice {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(20px);
+  
   font-size: 18px;
   position: absolute;
   bottom: 30px;
