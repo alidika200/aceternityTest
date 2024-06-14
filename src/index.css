@@ -29,8 +29,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-size: cover; 
-  background-repeat: no-repeat; 
-  background-color: #1a1a1a;
+  background: rgb(255,32,78);
+  background: linear-gradient(90deg, rgba(255,32,78,1) 0%, rgba(100,12,30,1) 42%, rgba(0,0,0,1) 86%);
 }
 
 h1 {

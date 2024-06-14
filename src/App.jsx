@@ -19,8 +19,10 @@ import LibraryCarousel from './libraryCarousel';
 import Feed from './feed';
 import SignUp from './SignUpPage';
 import Home from './home';
+import Profile from './profile';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
+import API from './apiTest';
 
 
 
@@ -61,12 +63,17 @@ function App() {
   <Route  path="/library" element={<LibraryCarousel/>}/>
   <Route path="/storePage" element={<GamePageStore {...gamePageStoreData} />} />
   <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
-  <Route  path="/profile" element={<GameForm/>}/>
+  <Route  path="/addgame" element={<GameForm/>}/>
   <Route  path="/checkout" element={<GameForm/>}/>
-  <Route  path="/logIn" element={<SignUp/>}/>
+  <Route  path="/signup" element={<SignUp/>}/>
+  <Route  path="/login" element={<SignUp/>}/>
+  <Route  path="/profile" element={<Profile/>}/>
+  <Route  path="/APII" element={<API/>}/>
  </Routes>
  </BrowserRouter>
   );
+
+  // curl --location 'https://www.cheapshark.com/api/1.0/games?id=612'
 }
 export default App;
 

@@ -14,11 +14,11 @@ const Store = () => {
   
   return (
    <> 
+<div className='storeWrapper'>
     <Header playerName ="Ali"
    backgroundImage = {profilePic}/> 
 
 <SideNav></SideNav>
-
 <div className='gg1'>
 
 <CarouselComponent game1="The Witcher 3 Wild Hunt"game2="Tom Clancy's the Division 2" game3="Hell Divers"  phrase2="" phrase3="" image1={witcher3image} image2={division} image3={helldiver} />
@@ -109,6 +109,7 @@ const Store = () => {
     backgroundImage={helldiver}
   />
   </div> 
+  </div>
     </>
  );
   

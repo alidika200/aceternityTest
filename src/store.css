@@ -1,15 +1,28 @@
 
+.storeWrapper{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: rgb(255,32,78);
+  background: linear-gradient(90deg, rgba(255,32,78,1) 0%, rgba(100,12,30,1) 42%, rgba(0,0,0,1) 86%);
+  height: 100%; 
+  width: 100%;  
+
+}
+
+.gg1{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 .card-cat{
     margin-top: 100px;
     margin-left: 140px;
     color: white;
   }
 
-  .gg1{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
+
 
   .card-row{
     margin-left: 140px;
