@@ -6,8 +6,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import ReactPlayer from 'react-player';
 import SideNav from './dropDownNavBar';
-
-const GamePageStore = ({gameName,studioName, backgroundImage, price, Description, releaseDate, category, steam, epic, gog, cpu, gpu, ram, review, userImage, userReview, image1, image2, image3, trailer}) => {
+import { useLocation } from 'react-router-dom';
+const GamePageStore = () => {
+  const location = useLocation();
+  const {
+    gameName,
+    studioName,
+    backgroundImage,
+    price,
+    Description,
+    releaseDate,
+    category,
+    steam,
+    humbleBundle,
+    gog,
+    cpu,
+    gpu,
+    ram,
+    review,
+    userImage,
+    userReview,
+    image1,
+    image2,
+    image3,
+    trailer
+  } = location.state || {};
 
   const images = [image1, image2, image3];
 
@@ -80,8 +103,8 @@ const GamePageStore = ({gameName,studioName, backgroundImage, price, Description
               <div className="price-card">
                 <ul>
                   <li>Steam: {steam}</li>
-                  <li>Epic: {epic}</li>
                   <li>GOG: {gog}</li>
+                  <li>Humble Bundle: {humbleBundle}</li>
                 </ul>
               </div>
             </div>
@@ -95,10 +118,10 @@ const GamePageStore = ({gameName,studioName, backgroundImage, price, Description
                 <div className="imageStore" style={{ backgroundImage: `url(${userImage})` }}></div>
                 <p className="tours-discStore">{review}</p>
               </div>
-              <div className="submit">
-                <div className='rate'>
-                  <button className="up"><FontAwesomeIcon icon={faThumbsUp} /></button>
-                  <button className="down"> <FontAwesomeIcon icon={faThumbsDown} /> </button>
+              <div className="submitStore">
+                <div className='rateStore'>
+                  <button className="upStore"><FontAwesomeIcon icon={faThumbsUp} /></button>
+                  <button className="downStore"> <FontAwesomeIcon icon={faThumbsDown} /> </button>
                 </div>
               </div>
             </div>

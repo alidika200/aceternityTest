@@ -28,40 +28,15 @@ import API from './apiTest';
 
 
 
-function App() {
-
-  const gamePageStoreData = {
-    gameName: "The Witcher 3 Wild Hunt",
-    studioName: "CD Projekt Red",
-    backgroundImage: witcher3image,
-    price: "60$",
-    Description: "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt",
-    releaseDate: "5/6/2024",
-    category: "Action",
-    steam: "80$",
-    epic: "65$",
-    gog: "75$",
-    cpu: "Intel Core i5 7750k",
-    gpu: "Nvidia RTX 4090",
-    ram: "32",
-    review: "Good",
-    userImage: profilePic,
-    userReview: "It is a very good game",
-    image1: division,
-    image2: witcher3image,
-    image3: helldivers,
-    trailer: "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
-  };
+function App() { 
   return (
-
-    
     <BrowserRouter>
 <Routes>
   <Route exact path="/" element={<Home/>}/>
   <Route  path="/feed" element={<Feed/>}/>
   <Route  path="/store" element={<Store/>}/>
   <Route  path="/library" element={<LibraryCarousel/>}/>
-  <Route path="/storePage" element={<GamePageStore {...gamePageStoreData} />} />
+  <Route path="/storePage" element={<GamePageStore />} />
   <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
   <Route  path="/addgame" element={<GameForm/>}/>
   <Route  path="/checkout" element={<GameForm/>}/>
