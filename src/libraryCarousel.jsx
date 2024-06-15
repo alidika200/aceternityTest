@@ -1,70 +1,228 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './LibraryCarousel.css';
-import divisionImage from './assets/division.jpg';
-import profilePic from './assets/shitpost.jpg';
-import witcherImage from './assets/wicherCover.jpg';
-import cyberpunkImage from './assets/wall1.jpg';
-import breakImage from './assets/wall1.jpg';
-import whoImage from './assets/wall3.jpg';
+import witcher3image from './assets/witcher3.jpg';
+import witcher3image1 from './assets/witcher3image1.jpg';
+import witcher3image2 from './assets/witcher3image2.jpg';
+import witcher3image3 from './assets/witcher3image3.jpg';
+import hogwarts from './assets/hogwarts.jpg';
+import division1 from './assets/division1.jpg';
+import division2 from './assets/division2.jpg';
+import division3 from './assets/division3.webp';
+import wall1 from './assets/wall1.jpg';
+import {
+    MenuOutlined
+  } from '@ant-design/icons';
 import Header from './Layout';
 import SideNav from './dropDownNavBar';
-import { AppstoreOutlined, AppstoreFilled } from '@ant-design/icons';
+import profilePic from './assets/shitpost.jpg'
+import { Margin } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
-const LibraryCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const Carousel = () => {
+    const nextRef = useRef(null);
+    const prevRef = useRef(null);
+    const carouselRef = useRef(null);
+    const sliderRef = useRef(null);
+    const thumbnailBorderRef = useRef(null);
+    const timeRef = useRef(null);
+    const timeRunning = 3000;
+    const timeAutoNext = 7000;
 
-  const slides = [
-    { image: divisionImage, author: 'Ubisoft, Massive', title: "Tom Clancy's", topic: 'The Division' },
-    { image: witcherImage, author: 'Cd Project Red', title: 'The Witcher 3', topic: 'Wild Hunt' },
-    { image: cyberpunkImage, author: 'Cd Project Red', title: 'CyberPunk', topic: '2077' },
-    { image: breakImage, author: 'GamePedia', title: 'Take A Break', topic: 'Routine' },
-    { image: breakImage, author: 'GamePedia', title: 'Take A Break', topic: 'Routine' },
-    { image: whoImage, author: 'GamePedia', title: 'Who are we?', topic: 'Get to know us' }
-  ];
+    useEffect(() => {
+        const nextDom = nextRef.current;
+        const prevDom = prevRef.current;
+        const carouselDom = carouselRef.current;
+        const sliderDom = sliderRef.current;
+        const thumbnailBorderDom = thumbnailBorderRef.current;
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-  };
+        let runTimeOut;
+        let runNextAuto;
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
-  };
+        const showSlider = (type) => {
+            const sliderItemsDom = sliderDom.querySelectorAll('.itemCarouselLibrary');
+            const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.itemCarouselLibrary');
 
-  return (
-    <div className={`carouselLibrary ${currentSlide === 0 ? 'next' : 'prev'}`}>
-      <Header playerName="Ali" backgroundImage={profilePic} />
-      <SideNav />
-      <div className="listLibraryCarousel">
-        {slides.map((slide, index) => (
-          <div key={index} className={`itemCarouselLibrary ${index === currentSlide ? 'active' : ''}`}>
-            <img src={slide.image} alt={slide.title} />
-            <div className="contentCarouselLibrary">
-              <div className="author">{slide.author}</div>
-              <div className="title">{slide.title}</div>
-              <div className="topic">{slide.topic}</div>
-              <div className="buttons">
-                <button>Play</button>
-                <button>More</button>
-              </div>
+            if (type === 'next') {
+                sliderDom.appendChild(sliderItemsDom[0]);
+                thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+                carouselDom.classList.add('next');
+            } else {
+                sliderDom.prepend(sliderItemsDom[sliderItemsDom.length - 1]);
+                thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+                carouselDom.classList.add('prev');
+            }
+
+            clearTimeout(runTimeOut);
+            runTimeOut = setTimeout(() => {
+                carouselDom.classList.remove('next');
+                carouselDom.classList.remove('prev');
+            }, timeRunning);
+
+            clearTimeout(runNextAuto);
+            runNextAuto = setTimeout(() => {
+                nextDom.click();
+            }, timeAutoNext);
+        };
+
+        nextDom.onclick = () => showSlider('next');
+        prevDom.onclick = () => showSlider('prev');
+
+        runNextAuto = setTimeout(() => {
+            nextDom.click();
+        }, timeAutoNext);
+
+        return () => {
+            clearTimeout(runTimeOut);
+            clearTimeout(runNextAuto);
+        };
+    }, []);
+
+    return (
+
+<>
+
+      
+        <div className="carouselLibrary" ref={carouselRef}>
+        <Header playerName ="Ali"
+      backgroundImage = {profilePic}/> 
+   
+   <SideNav></SideNav>
+            <div className="list200" ref={sliderRef}>
+                <div className="itemCarouselLibrary">
+                    <img src={division3} alt="The Division" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Ubisoft, Massive</div>
+                        <div className="title">Tom Clancy's</div>
+                        <div className="topic">The Division</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={witcher3image} alt="The Witcher 3" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Cd Project Red</div>
+                        <div className="title">The Witcher 3</div>
+                        <div className="topic">Wild Hunt</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={hogwarts} alt="CyberPunk 2077" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Warner Bros</div>
+                        <div className="title">Hogwarts</div>
+                        <div className="topic">Legacy</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Cd Project Red</div>
+                        <div className="title">CyberPunk</div>
+                        <div className="topic">2077</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Cd Project Red</div>
+                        <div className="title">CyberPunk</div>
+                        <div className="topic">2077</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Cd Project Red</div>
+                        <div className="title">CyberPunk</div>
+                        <div className="topic">2077</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Cd Project Red</div>
+                        <div className="title">CyberPunk</div>
+                        <div className="topic">2077</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                    <div className="contentCarouselLibrary">
+                        <div className="author">Cd Project Red</div>
+                        <div className="title">CyberPunk</div>
+                        <div className="topic">2077</div>
+                        <div className="buttons">
+                            <button>Play</button>
+                            <button>More</button>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="thumbnail">
-        {slides.map((slide, index) => (
-          <div key={index} className={`itemCarouselLibrary ${index === currentSlide ? 'active' : ''}`}>
-            <img src={slide.image} alt={slide.title} />
-          </div>
-        ))}
-      </div>
-      <div className="arrows">
-        <button onClick={prevSlide}>&lt;</button>
-        <button onClick={nextSlide}>&gt;</button>
-        <button id="shape"> <AppstoreFilled /></button>
-      </div>
-      <div className="time"></div>
-    </div>
-  );
+            <div className="thumbnail" ref={thumbnailBorderRef}>
+                <div className="itemCarouselLibrary">
+                    <img src={division3} alt="The Division" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={witcher3image} alt="The Witcher 3" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={hogwarts} alt="CyberPunk 2077" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                </div>
+                <div className="itemCarouselLibrary">
+                    <img src={wall1} alt="Take A Break" />
+                </div>
+            </div>
+            <div className="arrows">
+                <button id="prev" ref={prevRef}>{'<'}</button>
+                <button id="next" ref={nextRef}>{'>'}</button>
+                <Link to="/library2">
+                <button id="next"> <MenuOutlined /></button>
+                </Link>
+            </div>
+            <div className="time" ref={timeRef}></div>
+        </div>
+        </>
+    );
 };
 
-export default LibraryCarousel;
+export default Carousel;

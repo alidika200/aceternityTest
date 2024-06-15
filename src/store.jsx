@@ -3,8 +3,8 @@ import Card from './card';
 import './store.css'
 import witcher3image from './assets/witcher3.jpg';
 import helldiver from './assets/helldivers.jpg';
-import division from './assets/download.jpg'
-import profilePic from './assets/shitpost.jpg'
+import division from './assets/download.jpg';
+import profilePic from './assets/shitpost.jpg';
 import Header from './Layout';
 import CarouselComponent from './CarouselComponent';
 import SideNav from './dropDownNavBar';

@@ -16,13 +16,15 @@ import { HdRounded } from '@mui/icons-material';
 import SideNav from './dropDownNavBar';
 import LibraryCarousel from './libraryCarousel';
 import Feed from './feed';
-import SignUp from './SignUpPage';
+import Login2 from './loginPage';
 import Home from './home';
 import Profile from './profile';
 import Friends from './friends';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import API from './apiTest';
+import LibraryGrid from './LibraryGrids';
+import SignUp2 from './singUp';
 
 function App() { 
   return (
@@ -32,13 +34,14 @@ function App() {
   <Route  path="/feed" element={<Feed/>}/>
   <Route  path="/store" element={<Store/>}/>
   <Route  path="/library" element={<LibraryCarousel/>}/>
-  <Route path="/storePage" element={<GamePageStore />} />
+  <Route  path="/library2" element={<LibraryGrid/>}/>
+  <Route  path="/storePage" element={<GamePageStore />} />
   <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
   <Route  path="/friends" element={<Friends/>}/>
   <Route  path="/addgame" element={<GameForm/>}/>
   <Route  path="/checkout" element={<GameForm/>}/>
-  <Route  path="/signup" element={<SignUp/>}/>
-  <Route  path="/login" element={<SignUp/>}/>
+  <Route  path="/signup" element={<SignUp2/>}/>
+  <Route  path="/login" element={<Login2/>}/>
   <Route  path="/profile" element={<Profile/>}/>
   <Route  path="/APII" element={<API/>}/>
  </Routes>

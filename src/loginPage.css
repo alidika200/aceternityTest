@@ -26,10 +26,10 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    width: 700px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
+    width: 700px; 
+    height: 400px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for better readability */
+    background-color: rgba(255, 255, 255, 0.8); 
 }
 
 .wowform-container {
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
     border-right: 1px solid #ccc;
 }
@@ -47,6 +47,11 @@
     max-width: 300px; 
     display: flex;
     flex-direction: column;
+}
+.welcomesh{
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .wowform-container input,
@@ -63,6 +68,29 @@
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+}
+
+.additional-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    color: #ccc;
+    margin: 0 5px;
 }
 
 .animation-container {

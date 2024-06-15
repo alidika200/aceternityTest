@@ -6,12 +6,27 @@ import DropdownMenu from './dropDownMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import SideNav from './dropDownNavBar';
+import { useLocation } from 'react-router-dom';
 
-const GamePageLibrary = ({ backgroundImage, gameName, studioName, Description, datePlayed, totalHours, numberOfTournaments, tournamentImage, tournamentDesc }) => {
+const GamePageLibrary = () => {
+
+
+  const location = useLocation();
+  const {
+    backgroundImage, 
+    gameName, 
+    studioName, 
+    Description,
+     datePlayed, 
+    totalHours, 
+    numberOfTournaments, 
+    tournamentImage,
+     tournamentDesc
+  } = location.state || {};
   const [openMenu, setOpenMenu] = useState(false);
   const [reviews, setReviews] = useState([]); // Initialize reviews state
 
-  // Function to handle form submission
+ 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission
     const newReview = document.getElementById("description").value; // Get the review text

@@ -18,6 +18,8 @@ const Profile = () => {
                         <img src={profilePic} alt="Profile Picture" className="profile-pic" />
                         <h2>Mansour</h2>
                         <button className="edit-btn">edit</button>
+                        <button className="edit-btn">edit</button>
+                        <button className="edit-btn">edit</button>
                     </div>
                     <div className="profile-content-container">
                         

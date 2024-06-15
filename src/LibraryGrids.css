@@ -1,28 +1,28 @@
-.friendwrap11{
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: rgb(255,32,78);
-  background: linear-gradient(90deg, rgba(255,32,78,1) 0%, rgba(100,12,30,1) 42%, rgba(0,0,0,1) 86%);
-  min-height: 600px; 
-  width: 100%;  
+.storeWrapper {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(255,32,78);
+    background: linear-gradient(90deg, rgba(255,32,78,1) 0%, rgba(100,12,30,1) 42%, rgba(0,0,0,1) 86%);
+    min-height: 600px; 
+    width: 100%;  
   }
-  .card-cat3 {
+  .card-cat2 {
     font-size: 30px;
-    margin-top: 40px;
-    margin-bottom: 122px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: 600px;
     color: white;
   }
-  .card-row3 {
+  
+  .card-row2 {
     display: flex;
     flex-wrap: wrap; /* Ensure the cards wrap to the next line */
     margin-left: 180px;
     gap: 20px; /* Adjust the gap between cards */
-    margin-top: 100px;
   }
   
-  .card-row3 > div {
+  .card-row2 > div {
     flex: 0 1 calc(16.66% - 20px); /* 16.66% ensures six cards per row, adjust the subtraction to match gap */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
   }

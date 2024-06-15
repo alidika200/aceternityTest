@@ -29,12 +29,12 @@ const Post = ({ userImage, userName, postText, mediaUrl }) => {
               )}
             </div>
           )}
-          <div className="submit">
-            <div className="rate">
-              <button className="up">
+          <div className="submitPost">
+            <div className="ratePost">
+              <button className="upPost">
                 <FontAwesomeIcon icon={faThumbsUp} />
               </button>
-              <button className="down">
+              <button className="downPost">
                 <FontAwesomeIcon icon={faThumbsDown} />
               </button>
               <button className="postOps"> <MenuOutlined /> </button>

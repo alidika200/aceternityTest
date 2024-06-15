@@ -55,21 +55,22 @@
   }
   
 
-  .rate {
+  .ratePost {
     display: flex;
     gap: 10px;
+    margin-top: 15px;
   }
   
-  button.up,
-  button.down {
+  button.upPost,
+  button.downPost {
     color: #fff;
-    width: 90px;
+    width: 60px;
     height: 40px;
     border: none;
     background-color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 15px;
-    flex: 1;
+ 
     margin-right: 10px;
   } 
   button.postOps {

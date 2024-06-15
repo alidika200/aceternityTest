@@ -19,8 +19,6 @@ const Header = ({playerName,  backgroundImage }) => {
       <h3 className="Logo">GAMEPEDIA </h3>
       <h3 className="greetings">Good Day {playerName}</h3>
       <div className="options">
-   
-
     <div className="SearchBar">   <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" style={{ color: '#ffffff' }} /> </div>
 
         <a href='#' className="notification" style={{ marginLeft: '15px' }}>
