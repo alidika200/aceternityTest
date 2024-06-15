@@ -38,6 +38,8 @@ const Profile = () => {
                             <div className="icons">
                                 <span>🎥</span>
                                 <span>🎮</span>
+                                
+                                
                             </div>
                         </div>
                     </div>
