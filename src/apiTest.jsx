@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import GamePageStore from './gamePageStore';
 
-function API() {
+function API({ gameName }) {
   const [gameDetails, setGameDetails] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -38,9 +37,9 @@ function API() {
 
     const getGameDetails = async () => {
       try {
-        const gameId = await fetchGameByTitle('The Witcher 3: Wild Hunt');
+        const gameId = await fetchGameByTitle(gameName);
         const details = await fetchGameDetailsById(gameId);
-        const filteredDeals = details.deals.filter(deal => [1,7,11].includes(parseInt(deal.storeID)));
+        const filteredDeals = details.deals.filter(deal => [1, 7, 11].includes(parseInt(deal.storeID)));
         setGameDetails({ ...details, deals: filteredDeals });
         setLoading(false);
       } catch (error) {
@@ -50,7 +49,7 @@ function API() {
     };
 
     getGameDetails();
-  }, []);
+  }, [gameName]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -65,19 +64,17 @@ function API() {
   }
 
   return (
-    <>
     <div>
-      <h1>{gameDetails.info.title}</h1>
-      <p>{gameDetails.info.description}</p>
       <ul>
         {gameDetails.deals.map(deal => (
           <li key={deal.dealID}>
-            Store ID: {deal.storeID} - ${deal.price}
+            {deal.storeID === '1' && <span>Steam: ${deal.price}</span>}
+            {deal.storeID === '7' && <span>GOG: ${deal.price}</span>}
+            {deal.storeID === '11' && <span>Humble Bundle: ${deal.price}</span>}
           </li>
         ))}
       </ul>
-    </div> 
-    </>
+    </div>
   );
 }
 

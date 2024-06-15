@@ -7,6 +7,8 @@ import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import ReactPlayer from 'react-player';
 import SideNav from './dropDownNavBar';
 import { useLocation } from 'react-router-dom';
+import API from './apiTest';
+
 const GamePageStore = () => {
   const location = useLocation();
   const {
@@ -100,13 +102,7 @@ const GamePageStore = () => {
 
             <div className="price">
               <p className="information">Prices</p>
-              <div className="price-card">
-                <ul>
-                  <li>Steam: {steam}</li>
-                  <li>GOG: {gog}</li>
-                  <li>Humble Bundle: {humbleBundle}</li>
-                </ul>
-              </div>
+              <API gameName={gameName} />
             </div>
           </div>
         </div>

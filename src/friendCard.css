@@ -1,0 +1,31 @@
+.smallCard {
+  width: 120px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imageFriend {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.friendName {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.friendName:hover {
+  color: rgba(255, 255, 255, 1);
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import profilePic from './assets/shitpost.jpg'
 import Header from './Layout';
 import Card from './card';
@@ -20,13 +19,10 @@ import Feed from './feed';
 import SignUp from './SignUpPage';
 import Home from './home';
 import Profile from './profile';
+import Friends from './friends';
 import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import API from './apiTest';
-
-
-
-
 
 function App() { 
   return (
@@ -38,6 +34,7 @@ function App() {
   <Route  path="/library" element={<LibraryCarousel/>}/>
   <Route path="/storePage" element={<GamePageStore />} />
   <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
+  <Route  path="/friends" element={<Friends/>}/>
   <Route  path="/addgame" element={<GameForm/>}/>
   <Route  path="/checkout" element={<GameForm/>}/>
   <Route  path="/signup" element={<SignUp/>}/>
@@ -47,8 +44,6 @@ function App() {
  </Routes>
  </BrowserRouter>
   );
-
-  // curl --location 'https://www.cheapshark.com/api/1.0/games?id=612'
 }
 export default App;
 

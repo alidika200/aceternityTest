@@ -8,7 +8,12 @@ import profilePic from './assets/shitpost.jpg'
 import Header from './Layout';
 import CarouselComponent from './CarouselComponent';
 import SideNav from './dropDownNavBar';
-
+import witcher3image1 from './assets/witcher3image1.jpg';
+import witcher3image2 from './assets/witcher3image2.jpg';
+import witcher3image3 from './assets/witcher3image3.jpg';
+import division1 from './assets/division1.jpg';
+import division2 from './assets/division2.jpg';
+import division3 from './assets/division3.webp';
 
 const Store = () => {
   
@@ -21,37 +26,56 @@ const Store = () => {
 <SideNav></SideNav>
 <div className='gg1'>
 
-<CarouselComponent game1="The Witcher 3: Wild Hunt"game2="Tom Clancy's the Division 2" game3="Hell Divers"  phrase2="" phrase3="" image1={witcher3image} image2={division} image3={helldiver} />
+<CarouselComponent game1="The Witcher 3 Wild Hunt"game2="Tom Clancy's the Division 2" game3="Hell Divers"  phrase2="" phrase3="" image1={witcher3image} image2={division} image3={helldiver} />
 </div>
 
       <p className='card-cat' >Online Only Games</p>
 
      <div className="card-row">
       <Card 
-         gameName= "The Witcher 3 Wild Hunt"
+         gameName= "The Witcher 3: wild hunt"
          studioName= "CD Projekt Red"
          categories={['Adventure', 'RPG']} 
          backgroundImage= {witcher3image}
          price= "60$"
-         Description= "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt"
+         Description= "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt awidhgwayiduwaiudhwaiuhduiwahdiuwahduiwahduiwahd"
          releaseDate= "5/6/2024"
          category= "Action"
-         steam="2"
-         gog= "10"
-         humbleBundle="20"
          cpu= "Intel Core i5 7750k"
          gpu= "Nvidia RTX 4090"
          ram= "32"
          review= "Good"
          userImage = {profilePic}
          userReview= "lmao so gay"
+         image1= {witcher3image1}
+         image2= {witcher3image2}
+         image3= {witcher3image3}
+         trailer= "https://youtu.be/c0i88t0Kacs?si=wVnS0T0LXI2slZIi"
+      />
+
+<Card 
+         gameName= "The division 2"
+         studioName= "Ubisoft, Massive"
+         categories={['Adventure', 'RPG']} 
+         backgroundImage= {division}
+         price= "60$"
+         Description= "Division 2 is an online only game acts as the sequel for the acclaimed divison 1 developed By ubisoft massive"
+         releaseDate= "5/6/2024"
+         humbleBundle="20"
+         cpu= "Intel Core i7 6660k"
+         gpu= "Nvidia RTX 2070"
+         ram= "32"
+         review= "Good"
+         userImage = {profilePic}
+         userReview= "kkkk"
          image1= {division}
          image2= {witcher3image}
          image3= {helldiver}
          trailer= "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
       />
 
- <Card 
+
+{/* <Card 
         gameName="Hell Divers 2" 
         categories={['Adventure', 'RPG']} 
         backgroundImage={helldiver}
@@ -72,13 +96,13 @@ const Store = () => {
         gameName="Hell Divers 2" 
         categories={['Adventure', 'RPG']} 
         backgroundImage={helldiver}
-      /> 
+      /> */}
     </div>
 
     <p className='card-cat' >Fantasy Games</p>
 
     <div className="card-row"> 
-     <Card 
+    {/* <Card 
         gameName="The Witcher 3 Wild Hunt"
         categories={['Action', 'Fantasy']} 
         backgroundImage={witcher3image}
@@ -103,7 +127,7 @@ const Store = () => {
       <p className='card-cat' >Fantasy Games</p>
 
 <div className="card-row"> 
-<Card 
+{/* <Card 
     gameName="The Witcher 3 Wild Hunt"
     categories={['Action', 'Fantasy']} 
     backgroundImage={witcher3image} price="60"
@@ -122,7 +146,7 @@ const Store = () => {
     gameName="Hell Divers 2" 
     categories={['Adventure', 'RPG']} 
     backgroundImage={helldiver}
-  /> 
+  /> */}
   </div> 
   </div>
     </>

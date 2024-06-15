@@ -28,7 +28,7 @@ const Card = ({ gameName, studioName, categories, backgroundImage, price, Descri
     trailer
   }; 
 
-  console.log('State data passed to Link:', stateData);
+ 
 
   return (
     <div className="card15">

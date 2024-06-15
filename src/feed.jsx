@@ -10,27 +10,18 @@ import SideNav from './dropDownNavBar';
 import Post from './postComponent';
 
 const Feed = () => {
-  
-
-
-  return (
+   return (
     <>
       <Header playerName="Ali" backgroundImage={profilePic} />
       <SideNav></SideNav>
       <div className='feed'>
-        <div className='createPostBar'></div>
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-       
-       
-        <div></div>
-      </div>
-
-
+        </div>
     </>
   );
 };
