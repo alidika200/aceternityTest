@@ -25,7 +25,7 @@ const SideNav = () => {
         return '3';
       case '/library':
         return '4';
-      case '/tournaments':
+      case '/tournament':
         return '5';
       case '/friends':
         return '6';
@@ -101,8 +101,8 @@ const SideNav = () => {
         </Menu.Item>
         <Menu.Item key="5">
 
-            <Tooltip title="Tournaments" placement="right">
-          <Link to="/tournaments">
+            <Tooltip title="Tournament" placement="right">
+          <Link to="/tournament">
               <StarOutlined />
               </Link>
             </Tooltip>

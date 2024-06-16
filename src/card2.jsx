@@ -2,17 +2,17 @@ import React from "react";
 import './card2.css';
 import { Link } from "react-router-dom";
 
-const Card2 = ({ backgroundImage, gameName, studioName, Description, datePlayed, totalHours, numberOfTournaments, tournamentImage, tournamentDesc }) => {
+const Card2 = ({ backgroundImage, gameName, studioName, Description, datePlayed, totalHours, tournamentImage,
+  tournamentName, tournamentDesc,  maxNumber }) => {
   const stateData = {
     backgroundImage, 
     gameName, 
     studioName, 
     Description,
-     datePlayed, 
+    datePlayed, 
     totalHours, 
-    numberOfTournaments, 
     tournamentImage,
-     tournamentDesc
+    tournamentName, tournamentDesc,  maxNumber
   };
 
   return (

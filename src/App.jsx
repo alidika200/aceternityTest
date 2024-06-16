@@ -26,27 +26,31 @@ import API from './apiTest';
 import LibraryGrid from './LibraryGrids';
 import SignUp2 from './singUp';
 import Community from './community';
-import Checkout from './checkout';
+import Bracket from './Bracket';
+import Tournament from './tournamentLanding';
+
 
 function App() { 
   return (
     <BrowserRouter>
 <Routes>
   <Route exact path="/" element={<Home/>}/>
+  <Route exact path="/Home" element={<Home/>}/>
   <Route  path="/feed" element={<Feed/>}/>
   <Route  path="/store" element={<Store/>}/>
+  <Route  path="/tournament" element={<Tournament/>}/>
   <Route  path="/library" element={<LibraryCarousel/>}/>
   <Route  path="/library2" element={<LibraryGrid/>}/>
   <Route  path="/storePage" element={<GamePageStore />} />
   <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
   <Route  path="/friends" element={<Friends/>}/>
-  <Route  path="/checkout" element={<Checkout/>}/>
   <Route  path="/addgame" element={<GameForm/>}/>
   <Route  path="/community" element={<Community/>}/>
   <Route  path="/signup" element={<SignUp2/>}/>
   <Route  path="/login" element={<Login2/>}/>
   <Route  path="/profile" element={<Profile/>}/>
   <Route  path="/APII" element={<API/>}/>
+  <Route  path="/br" element={<Bracket/>}/>
  </Routes>
  </BrowserRouter>
   );

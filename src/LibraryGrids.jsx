@@ -36,10 +36,11 @@ const LibraryGrid = () => {
          studioName= "CD Projekt Red"
          Description= "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt awidhgwayiduwaiudhwaiuhduiwahdiuwahduiwahduiwahd"
          datePlayed = "10/2/2024"
-          totalHours = "120"
-           numberOfTournaments = "8"
-            tournamentImage = {logo1}
-             tournamentDesc = "aoiwjhdoiwajdiwajdiowajdoawdoiwajdoiwaj"
+         totalHours = "120"
+         tournamentImage = {logo1}
+         tournamentName = "Masters Of Gwent"
+         tournamentDesc = "The 4th annual Gwent Tournament"
+         maxNumber="20"
       />
 
 <Card2
@@ -49,6 +50,8 @@ const LibraryGrid = () => {
          backgroundImage= {division}
          price= "60$"
          Description= "Division 2 is an online only game acts as the sequel for the acclaimed divison 1 developed By ubisoft massive"
+         datePlayed="10/3/2024"
+         totalHours="150"
          releaseDate= "5/6/2024"
          humbleBundle="20"
          cpu= "Intel Core i7 6660k"

@@ -69,9 +69,8 @@
 .disc-info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 900px; /* Match the width of .gameCard */
-    gap: 30px; /* Add space between the two cards */
+    gap: 20px; /* Add space between the two cards */
     margin-top: 20px;
 }
 
@@ -84,7 +83,8 @@
 
 .disc {
     height: 200px;
-    width: 700px;
+    margin-left: 50px;
+    width: 500px;
 }
 
 .disc-card p{
@@ -220,4 +220,83 @@
   }
 
 
+  
+
+  /* community.css */
+
+.cardwork {
+    --primary-clr: #1C204B;
+    --dot-clr: #BBC0FF;
+    --play: hsl(195, 74%, 62%);
+    width: 200px;
+    height: 170px;
+    border-radius: 10px;
+    font-family: "Arial";
+    color: #fff;
+    display: grid;
+    cursor: pointer;
+    grid-template-rows: 50px 1fr;
+  }
+  
+  .cardwork:hover .img-section {
+    transform: translateY(1em);
+  }
+  
+  .card-descwork {
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    top: -10px;
+    display: grid;
+    gap: 10px;
+    background: var(--primary-clr);
+  }
+  
+  .card-time {
+    font-size: 1.7em;
+    font-weight: 500;
+  }
+  
+  .img-section {
+    transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: hsl(195, 74%, 62%);
+  }
+  
+  .card-headerwork {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .card-titlework {
+    flex: 1;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+  
+  .card-menuwork {
+    display: flex;
+    gap: 4px;
+    margin-inline: auto;
+  }
+  
+  .cardwork svg {
+    float: right;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .cardwork .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--dot-clr);
+  }
+  
+  .cardwork .recent {
+    line-height: 0;
+    font-size: 0.8em;
+  }
   
