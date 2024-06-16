@@ -1,27 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './feed.css';
 import profilePic from './assets/shitpost.jpg';
 import Header from './Layout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import division from './assets/division.jpg'
-import ReactPlayer from 'react-player';
+import division from './assets/division.jpg';
 import SideNav from './dropDownNavBar';
 import Post from './postComponent';
+import UpperNavBar from './upperNavbar';
+import PostPopup from './postpopup';
 
 const Feed = () => {
-   return (
+  const [popupType, setPopupType] = useState(null);
+
+  const handlePostTypeSelected = (type) => {
+    setPopupType(type);
+  };
+
+  const handlePopupClose = () => {
+    setPopupType(null);
+  };
+
+  const handlePostSubmit = (postData) => {
+    console.log('Post submitted:', postData);
+  };
+
+  return (
     <>
       <Header playerName="Ali" backgroundImage={profilePic} />
-      <SideNav></SideNav>
-      <div className='feed'>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" ></Post>
-        </div>
+      <SideNav />
+      <UpperNavBar onPostTypeSelected={handlePostTypeSelected} />
+      <div className="feed">
+        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+      </div>
+      {popupType && <PostPopup type={popupType} onClose={handlePopupClose} onSubmit={handlePostSubmit} />}
     </>
   );
 };

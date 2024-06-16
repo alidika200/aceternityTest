@@ -25,6 +25,8 @@ import { BrowserRouter } from 'react-router-dom';
 import API from './apiTest';
 import LibraryGrid from './LibraryGrids';
 import SignUp2 from './singUp';
+import Community from './community';
+import Checkout from './checkout';
 
 function App() { 
   return (
@@ -38,8 +40,9 @@ function App() {
   <Route  path="/storePage" element={<GamePageStore />} />
   <Route  path="/libraryPage" element={<GamePageLibrary/>}/>
   <Route  path="/friends" element={<Friends/>}/>
+  <Route  path="/checkout" element={<Checkout/>}/>
   <Route  path="/addgame" element={<GameForm/>}/>
-  <Route  path="/checkout" element={<GameForm/>}/>
+  <Route  path="/community" element={<Community/>}/>
   <Route  path="/signup" element={<SignUp2/>}/>
   <Route  path="/login" element={<Login2/>}/>
   <Route  path="/profile" element={<Profile/>}/>

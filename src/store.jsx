@@ -33,7 +33,7 @@ const Store = () => {
 
      <div className="card-row">
       <Card 
-         gameName= "The Witcher 3: wild hunt"
+         gameName= "Mortal Kombat XL"
          studioName= "CD Projekt Red"
          categories={['Adventure', 'RPG']} 
          backgroundImage= {witcher3image}

@@ -1,0 +1,76 @@
+.communityLayout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .feed2 {
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+    align-items: center;
+    border-right: 1px solid white;
+    flex-grow: 1;
+  }
+  
+  .rightNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    position: sticky; 
+   
+  }
+  
+  .communityImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .communityName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  .filterCard{
+    margin-top: 20px;
+  }
+  
+  .filterCard, .communityCard {
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .filterCard ul, .communityCard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .filterCard li, .communityCard li {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .filterCard li:hover, .communityCard li:hover {
+    text-decoration: underline;
+  }
+  
+  .rightNav p {
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  
