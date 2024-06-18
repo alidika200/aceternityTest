@@ -27,7 +27,7 @@ import LibraryGrid from './LibraryGrids';
 import SignUp2 from './singUp';
 import Community from './community';
 import Bracket from './Bracket';
-import Tournament from './tournamentLanding';
+import Tournament from './tournamentList';
 
 
 function App() { 

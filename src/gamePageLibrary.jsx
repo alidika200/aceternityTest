@@ -17,7 +17,7 @@ const GamePageLibrary = () => {
     studioName, 
     Description,
     datePlayed, 
-    totalHours, tournamentImage,
+    totalHours, tournamentImage, tournamentName,
      tournamentDesc
   } = location.state || {};
   const stateData = {
@@ -26,13 +26,13 @@ const GamePageLibrary = () => {
     studioName, 
     Description,
     datePlayed, 
-    totalHours, tournamentImage,
+    totalHours, tournamentImage,tournamentName,
     tournamentDesc
   };
 
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [reviews, setReviews] = useState([]); // Initialize reviews state
+  const [reviews, setReviews] = useState([]); 
 
  
   const handleSubmit = (event) => {

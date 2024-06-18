@@ -1,0 +1,47 @@
+.dropdownMenu{
+    position: absolute;
+    top: 25rem;
+    right: 17.5rem;
+    width:180px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    z-index: 1000;
+    list-style-type: none;
+}
+
+.dropdownMenu::before{
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    right: 3rem;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.dropdownMenu ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .dropdownMenu ul li {
+    border-radius: 10px;
+    padding: 5px; /* Add padding to make sure each item takes one line */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+  }
+  
+  .dropdownMenu ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight glow effect */
+  }
+
+  .dropdownMenu ul li a:visited {
+    color: black; /* Prevent changing color after being clicked */
+  }

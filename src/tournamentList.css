@@ -1,0 +1,157 @@
+
+.outsideTournament{
+ 
+    font-family: Arial, sans-serif;
+    /* background-image: url('./assets/tor1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    height: 100%; 
+    width: 98.8vw;    
+}
+.tournamentCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    width: 1150px;
+    height: 1400px;
+    margin-left: 130px;
+  }
+  /* .ttwrap{
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+  } */
+  .tournamentpfp {
+    margin-left: 300px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .tournamentName {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .tournamentDesc {
+    margin-top: 30px;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .t-ranks{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    width: 600px;
+  }
+  .part-iif{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .t-inf{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    width: 300px;
+  }
+
+
+  .proName{
+    display: flex;
+    flex-direction: row;
+  }
+  .n1, .prize{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .prizes{  color: rgb(0, 0, 0);
+    font-size: 2.3em;
+    text-align: center;}
+
+.contestentCards {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #797979;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.contestNumber {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contestentProfile {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contestentInfo {
+  display: flex;
+  align-items: center;
+}
+
+.contestentName {
+  margin-top: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+} .JoinButton, .SpectateButton {
+    width: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .JoinButton {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .JoinButton[style*="background-color: red"] {
+    background-color: red;
+  }
+  
+  .SpectateButton {
+    background-color: #008CBA;
+    color: white;
+  }
+  
