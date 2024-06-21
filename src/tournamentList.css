@@ -79,10 +79,12 @@
     border: 1px solid #797979;
     border-radius: 5px;
     width: 300px;
+    height: 100px;
   }
 
 
   .proName{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
   }

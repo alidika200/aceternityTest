@@ -4,8 +4,8 @@ import 'react-chat-elements/dist/main.css';
 import './ChatWidget.css';
 
 // Sample avatar images (you can replace with actual image URLs)
-import avatar1 from './assets/shitpost.jpg';
-import avatar2 from './assets/avatar3.jpg';
+import avatar1 from './assets/debovxe-d9b6da12-ac0b-4e07-b12b-8021c24abfc7.jpg';
+import avatar2 from './assets/pfp333.jpg';
 
 const ChatWidget = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);

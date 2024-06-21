@@ -28,6 +28,7 @@ import SignUp2 from './singUp';
 import Community from './community';
 import Bracket from './Bracket';
 import Tournament from './tournamentList';
+import BackgroundGradientAnimationDemo from './TsxComponents/LandingPage';
 
 
 function App() { 
@@ -51,6 +52,7 @@ function App() {
   <Route  path="/profile" element={<Profile/>}/>
   <Route  path="/APII" element={<API/>}/>
   <Route  path="/br" element={<Bracket/>}/>
+  <Route  path="/landing" element={<BackgroundGradientAnimationDemo/>}/>
  </Routes>
  </BrowserRouter>
   );

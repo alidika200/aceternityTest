@@ -1,6 +1,7 @@
 import React from 'react';
 import './gamePageStore.css';
 import profilePic from './assets/shitpost.jpg';
+import pfp from './assets/pfp.webp';
 import Header from './Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
@@ -48,7 +49,7 @@ const GamePageStore = () => {
             <button className="playStore">{price}</button>
           </div>
           <div className="phrase">
-            <p>Steel For Humans, Silver for  <span className="highlight1">Monsters</span></p>
+            <p>When Society Falls We <span className="highlight1">Rise</span></p>
           </div>
         </div>
 

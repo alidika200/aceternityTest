@@ -90,7 +90,7 @@ const GamePageLibrary = () => {
             <div className="dot"></div>
           </div>
         </div>
-        <div className="card-time">{totalHours}</div>
+        <div className="card-time">{totalHours} Hours</div>
         <p className="recent">{datePlayed} - {totalHours}</p>
       </div>
     </div>

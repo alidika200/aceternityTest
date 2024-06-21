@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './tournamentList.css';
 import profilePic from './assets/shitpost.jpg';
+import pro1 from './assets/unnamed.webp';
+import pro2 from './assets/debovxe-d9b6da12-ac0b-4e07-b12b-8021c24abfc7.jpg';
+import pro3 from './assets/pfp333.jpg';
 import Header from './Layout';
 import SideNav from './dropDownNavBar';
 import { useLocation } from 'react-router-dom';
@@ -43,8 +46,16 @@ const Tournament = () => {
         <div className='contestentCards'>
           <div className='contestNumber'>Participants: {number}/{maxNumber}20</div>
           <div className='proName'>
-          <div className="contestentProfile" style={{ backgroundImage: `url(${profilePic})` }}></div>
+          <div className="contestentProfile" style={{ backgroundImage: `url(${pro1})` }}></div>
+          <div className='contestentName'>JayJay</div>
+          </div>
+          <div className='proName'>
+          <div className="contestentProfile" style={{ backgroundImage: `url(${pro2})` }}></div>
           <div className='contestentName'>Ali</div>
+          </div>
+          <div className='proName'>
+          <div className="contestentProfile" style={{ backgroundImage: `url(${pro3})` }}></div>
+          <div className='contestentName'>Micky</div>
           </div>
         </div>
         <div className='t-inf'>

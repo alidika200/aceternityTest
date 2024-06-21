@@ -1,89 +1,40 @@
-.bracket {
+.tournament-bracket {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff4d4d, #9933ff);
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 .round {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.match {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 20px 0;
+  justify-content: space-around;
+  height: 100%;
   padding: 10px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  background: #fff;
-  transition: all 0.3s ease-in-out;
-  position: relative;
 }
 
-.player {
+.matchup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px 0;
-  padding: 5px 10px;
-  border-radius: 3px;
-  background: #f2f2f2;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-  position: relative;
-  animation: appear 0.5s ease;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.player:hover {
-  background: #ddd;
-}
-
-.player.winner {
-  background: #4CAF50;
-  color: white;
-  animation: moveToNextRound 1s ease forwards;
-  position: absolute; /* Use absolute positioning during animation */
-  z-index: 1;
-}
-
-.tracer {
-  width: 2px;
+.team {
+  width: 50px;
   height: 50px;
-  background: #333;
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  animation: tracerAnimation 0.5s ease;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
-@keyframes tracerAnimation {
-  from {
-    height: 0;
-  }
-  to {
-    height: 50px;
-  }
-}
-
-@keyframes moveToNextRound {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translate(calc(100% + 20px), calc(-100% - 20px));
-  }
+.champion .team {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
 }

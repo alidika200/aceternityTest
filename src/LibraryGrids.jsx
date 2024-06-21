@@ -16,6 +16,13 @@ import division2 from './assets/division2.jpg';
 import division3 from './assets/division3.webp';
 import Card2 from './card2';
 import logo1 from './assets/logo1.png'
+import wall1 from './assets/wall1.jpg';
+import wall3 from './assets/wall3.jpg';
+import wall4 from './assets/wall4new.jpg';
+import hogwarts from './assets/hogwarts.jpg';
+import logo25 from './assets/witcherlogo.jpg';
+
+
 
 const LibraryGrid = () => {
   
@@ -34,7 +41,7 @@ const LibraryGrid = () => {
          backgroundImage= {witcher3image} 
          gameName= "The Witcher 3: wild hunt"
          studioName= "CD Projekt Red"
-         Description= "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt awidhgwayiduwaiudhwaiuhduiwahdiuwahduiwahduiwahd"
+         Description= "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt"
          datePlayed = "10/2/2024"
          totalHours = "120"
          tournamentImage = {logo1}
@@ -89,7 +96,7 @@ const LibraryGrid = () => {
          gameName= "The division 2"
          studioName= "Ubisoft, Massive"
          categories={['Adventure', 'RPG']} 
-         backgroundImage= {helldiver}
+         backgroundImage= {wall1}
          price= "60$"
          Description= "Division 2 is an online only game acts as the sequel for the acclaimed divison 1 developed By ubisoft massive"
          releaseDate= "5/6/2024"
@@ -105,6 +112,83 @@ const LibraryGrid = () => {
          image3= {helldiver}
          trailer= "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
       />
+         <Card2 
+         backgroundImage= {wall3} 
+         gameName= "The Witcher 3: wild hunt"
+         studioName= "CD Projekt Red"
+         Description= "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt awidhgwayiduwaiudhwaiuhduiwahdiuwahduiwahduiwahd"
+         datePlayed = "10/2/2024"
+         totalHours = "120"
+         tournamentImage = {logo1}
+         tournamentName = "Masters Of Gwent"
+         tournamentDesc = "The 4th annual Gwent Tournament"
+         maxNumber="20"
+      />
+
+<Card2
+         gameName= "The division 2"
+         studioName= "Ubisoft, Massive"
+         categories={['Adventure', 'RPG']} 
+         backgroundImage= {hogwarts}
+         price= "60$"
+         Description= "Division 2 is an online only game acts as the sequel for the acclaimed divison 1 developed By ubisoft massive"
+         datePlayed="10/3/2024"
+         totalHours="150"
+         releaseDate= "5/6/2024"
+         humbleBundle="20"
+         cpu= "Intel Core i7 6660k"
+         gpu= "Nvidia RTX 2070"
+         ram= "32"
+         review= "Good"
+         userImage = {profilePic}
+         userReview= "kkkk"
+         image1= {division}
+         image2= {witcher3image}
+         image3= {helldiver}
+         trailer= "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
+      />
+      <Card2
+         gameName= "The division 2"
+         studioName= "Ubisoft, Massive"
+         categories={['Adventure', 'RPG']} 
+         backgroundImage= {wall4}
+         price= "60$"
+         Description= "Division 2 is an online only game acts as the sequel for the acclaimed divison 1 developed By ubisoft massive"
+         releaseDate= "5/6/2024"
+         humbleBundle="20"
+         cpu= "Intel Core i7 6660k"
+         gpu= "Nvidia RTX 2070"
+         ram= "32"
+         review= "Good"
+         userImage = {profilePic}
+         userReview= "kkkk"
+         image1= {division}
+         image2= {witcher3image}
+         image3= {helldiver}
+         trailer= "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
+      />
+            <Card2
+         gameName= "The division 2"
+         studioName= "Ubisoft, Massive"
+         categories={['Adventure', 'RPG']} 
+         backgroundImage= {logo25}
+         price= "60$"
+         Description= "Division 2 is an online only game acts as the sequel for the acclaimed divison 1 developed By ubisoft massive"
+         releaseDate= "5/6/2024"
+         humbleBundle="20"
+         cpu= "Intel Core i7 6660k"
+         gpu= "Nvidia RTX 2070"
+         ram= "32"
+         review= "Good"
+         userImage = {profilePic}
+         userReview= "kkkk"
+         image1= {division}
+         image2= {witcher3image}
+         image3= {helldiver}
+         trailer= "https://youtu.be/QdBZY2fkU-0?si=wbDYYfqhNzGf8-ta"
+      />
+       
+       
        
     </div>
 

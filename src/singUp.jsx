@@ -2,7 +2,7 @@ import React from 'react';
 import './signUp.css';
 import character1 from './assets/geraltdef.png';
 import character2 from './assets/darksouls.png';
-import wallpap from './assets/nomansky.jpg';
+import wallpap from './assets/wallpaperspace.jpg';
 import { Link } from 'react-router-dom';
 
 const SignUp2 = () => {
@@ -10,8 +10,8 @@ const SignUp2 = () => {
     const animations = ['animateCharacter1'];
 
     return (
-        <div className='outside-wrapper2'>
-            <div className='loginali2' style={{ backgroundImage: `url(${wallpap})` }}>
+        <div className='outside-wrapper2' style={{ backgroundImage: `url(${wallpap})` }}>
+            <div className='loginali2' >
                 <div className="wowcontainer2">
                     <div className="wowform-container2">
                         <form id="signup-login-form2">

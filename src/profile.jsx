@@ -1,6 +1,6 @@
 import React from 'react';
 import './profile.css';
-import profilePic from './assets/shitpost.jpg';
+import profilePic from './assets/debovxe-d9b6da12-ac0b-4e07-b12b-8021c24abfc7.jpg';
 import SideNav from './dropDownNavBar';
 import Header from './Layout';
 
@@ -17,9 +17,9 @@ const Profile = () => {
                     <div className="profile-pic-container">
                         <img src={profilePic} alt="Profile Picture" className="profile-pic" />
                         <h2>Mansour</h2>
-                        <button className="edit-btn">edit</button>
-                        <button className="edit-btn">edit</button>
-                        <button className="edit-btn">edit</button>
+                        <button className="edit-btn">Add</button>
+                        <button className="edit-btn">chat</button>
+                        <button className="edit-btn">block</button>
                     </div>
                     <div className="profile-content-container">
                         

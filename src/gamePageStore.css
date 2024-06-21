@@ -26,17 +26,17 @@
 
 .name-studioStore p {
   margin: 0;
-  color: #c52424;
+  color: #ebe5e5;
 }
 
 .name-studioStore .gameNameStore {
   font-size: 25px;
-  color: black;
+  color: rgb(250, 246, 246);
 }
 
 .name-studioStore .studioNameStore {
   font-size: 15px;
-  color: black;
+  color: rgb(249, 247, 247);
 }
 
 .playButtonStore {
@@ -190,6 +190,10 @@
   margin-top: 10px;
   display: flex;
   justify-content: flex-start;
+}
+
+.highlight1{
+  color: orange;
 }
 
 .rateStore {

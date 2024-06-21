@@ -2,6 +2,10 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faImage, faVideo } from '@fortawesome/free-solid-svg-icons';
 import './upperNavBar.css';
+import {
+  PictureOutlined
+} from '@ant-design/icons';
+
 
 const UpperNavBar = ({ onPostTypeSelected }) => {
   return (
@@ -10,7 +14,7 @@ const UpperNavBar = ({ onPostTypeSelected }) => {
         <FontAwesomeIcon icon={faPen} />
       </button>
       <button className="button-large" onClick={() => onPostTypeSelected('image')}>
-        <FontAwesomeIcon icon={faImage} />
+        <PictureOutlined width={120} />
       </button>
       <button className="button-large" onClick={() => onPostTypeSelected('video')}>
         <FontAwesomeIcon icon={faVideo} />

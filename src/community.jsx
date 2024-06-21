@@ -1,6 +1,7 @@
 import React from 'react';
 import './community.css';
 import profilePic from './assets/shitpost.jpg';
+import pro1 from './assets/unnamed.webp';
 import Header from './Layout';
 import division from './assets/division.jpg';
 import logo from './assets/witcherlogo.jpg';
@@ -11,13 +12,14 @@ import witcher3image from './assets/witcher3.jpg';
 import witcher3image1 from './assets/witcher3image1.jpg';
 import witcher3image2 from './assets/witcher3image2.jpg';
 import witcher3image3 from './assets/witcher3image3.jpg';
+import logo25 from './assets/witcherlogo.jpg';
 
 const Community = () => {
   const gameData = {
     gameName: "The Witcher 3: Wild Hunt",
     studioName: "CD Projekt Red",
     categories: ['Adventure', 'RPG'],
-    backgroundImage: witcher3image,
+    backgroundImage: logo25,
     price: "60$",
     Description: "Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt.",
     releaseDate: "5/6/2024",
@@ -40,7 +42,7 @@ const Community = () => {
       <SideNav />
       <div className="communityLayout">
         <div className="feed2">
-          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+          <Post userImage={pro1} userName="Ali" mediaUrl={witcher3image2} postText="Wow this game is rad" />
           <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
           <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
           <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />

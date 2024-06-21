@@ -1,17 +1,17 @@
 import React from 'react';
 import './loginPage.css';
-import character1 from './assets/geraltdef.png';
+import character1 from './assets/ciri.png';
 import character2 from './assets/darksouls.png';
-import wallpap from './assets/nomansky.jpg';
+import wallpap from './assets/wall2.jpg';
 import { Link } from 'react-router-dom';
 
 const Login2 = () => {
-    const characterImages = [character1, character2];
-    const animations = ['animateCharacter1', 'animateCharacter2'];
+    const characterImages = [character1];
+    const animations = ['animateCharacter1'];
 
     return (
-        <div className='outside-wrapper'>
-            <div className='loginali' style={{ backgroundImage: `url(${wallpap})` }}>
+        <div className='outside-wrapper' style={{ backgroundImage: `url(${wallpap})` }}>
+            <div className='loginali' >
                 <div className="wowcontainer">
                     <div className="wowform-container">
                         <form id="signup-login-form">

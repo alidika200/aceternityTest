@@ -9,6 +9,9 @@ import division1 from './assets/division1.jpg';
 import division2 from './assets/division2.jpg';
 import division3 from './assets/division3.webp';
 import wall1 from './assets/wall1.jpg';
+import wall3 from './assets/wall3.jpg';
+import helldiver from './assets/helldivers.jpg';
+import logo25 from './assets/witcherlogo.jpg';
 import {
     MenuOutlined
   } from '@ant-design/icons';
@@ -125,65 +128,21 @@ const Carousel = () => {
                     </div>
                 </div>
                 <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
+                    <img src={helldiver} alt="CyberPunk 2077" />
                     <div className="contentCarouselLibrary">
-                        <div className="author">Cd Project Red</div>
-                        <div className="title">CyberPunk</div>
-                        <div className="topic">2077</div>
+                        <div className="author">Warner Bros</div>
+                        <div className="title">Hogwarts</div>
+                        <div className="topic">Legacy</div>
                         <div className="buttons">
                             <button>Play</button>
                             <button>More</button>
                         </div>
                     </div>
                 </div>
-                <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
-                    <div className="contentCarouselLibrary">
-                        <div className="author">Cd Project Red</div>
-                        <div className="title">CyberPunk</div>
-                        <div className="topic">2077</div>
-                        <div className="buttons">
-                            <button>Play</button>
-                            <button>More</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
-                    <div className="contentCarouselLibrary">
-                        <div className="author">Cd Project Red</div>
-                        <div className="title">CyberPunk</div>
-                        <div className="topic">2077</div>
-                        <div className="buttons">
-                            <button>Play</button>
-                            <button>More</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
-                    <div className="contentCarouselLibrary">
-                        <div className="author">Cd Project Red</div>
-                        <div className="title">CyberPunk</div>
-                        <div className="topic">2077</div>
-                        <div className="buttons">
-                            <button>Play</button>
-                            <button>More</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
-                    <div className="contentCarouselLibrary">
-                        <div className="author">Cd Project Red</div>
-                        <div className="title">CyberPunk</div>
-                        <div className="topic">2077</div>
-                        <div className="buttons">
-                            <button>Play</button>
-                            <button>More</button>
-                        </div>
-                    </div>
-                </div>
+              
+           
+                
+                
                 
             </div>
             <div className="thumbnail" ref={thumbnailBorderRef}>
@@ -200,16 +159,10 @@ const Carousel = () => {
                     <img src={wall1} alt="Take A Break" />
                 </div>
                 <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
+                    <img src={helldiver} alt="Take A Break" />
                 </div>
                 <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
-                </div>
-                <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
-                </div>
-                <div className="itemCarouselLibrary">
-                    <img src={wall1} alt="Take A Break" />
+                    <img src={wall3} alt="Take A Break" />
                 </div>
             </div>
             <div className="arrows">

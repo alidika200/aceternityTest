@@ -1,62 +1,56 @@
 import React, { useState } from 'react';
 import './Bracket.css';
+import t1 from './assets/avatar3.jpg';
+import t2 from './assets/pfp55.jpg';
+import t3 from './assets/pfp.webp';
+import t4 from './assets/pfp333.jpg';
+import t5 from './assets/shitpost.jpg';
+import t6 from './assets/unnamed.webp';
+import t7 from './assets/witcherlogo.jpg';
+import t8 from './assets/debovxe-d9b6da12-ac0b-4e07-b12b-8021c24abfc7.jpg';
+
 
 const Bracket = () => {
-  const initialMatches = [
-    ['Player 1', 'Player 2'],
-    ['Player 3', 'Player 4'],
-    ['Player 5', 'Player 6'],
-    ['Player 7', 'Player 8'],
+  const teams = [
+    { id: 1, image:  {t1} },
+    { id: 2, image:  {t2}  },
+    { id: 3, image:  {t3}  },
+    { id: 4, image:  {t4}  },
+    { id: 5, image:  {t5}  },
+    { id: 6, image:  {t6}  },
+    { id: 7, image:  {t7}  },
+    { id: 8, image:  {t8}  },
   ];
 
-  const [matches, setMatches] = useState([initialMatches]);
-  const [winners, setWinners] = useState([]);
-
-  const handlePlayerClick = (roundIndex, matchIndex, player) => {
-    const newMatches = [...matches];
-    const newWinners = [...winners];
-
-    if (!newMatches[roundIndex + 1]) {
-      newMatches[roundIndex + 1] = [];
-    }
-
-    newMatches[roundIndex + 1].push([player]);
-
-    if (!newWinners[roundIndex]) {
-      newWinners[roundIndex] = {};
-    }
-
-    newWinners[roundIndex][matchIndex] = player;
-
-    setMatches(newMatches);
-    setWinners(newWinners);
-  };
-
-  const renderMatches = (round, roundIndex) => {
-    return round.map((match, matchIndex) => (
-      <div className="match" key={matchIndex}>
-        {match.map((player, playerIndex) => (
-          <div
-            className={`player ${winners[roundIndex] && winners[roundIndex][matchIndex] === player ? 'winner' : ''}`}
-            key={playerIndex}
-            onClick={() => handlePlayerClick(roundIndex, matchIndex, player)}
-          >
-            {player}
+  return (
+    <div className="tournament-bracket">
+      <div className="round round-1">
+        {teams.slice(0, 4).map(team => (
+          <div className="matchup" key={team.id}>
+            <img src={team.image} alt={`Team ${team.id}`} className="team" />
           </div>
         ))}
       </div>
-    ));
-  };
-
-  return (
-    <div className="bracket">
-      {matches.map((round, roundIndex) => (
-        <div className="round" key={roundIndex}>
-          {renderMatches(round, roundIndex)}
-        </div>
-      ))}
+      <div className="round round-2">
+        {teams.slice(4, 6).map(team => (
+          <div className="matchup" key={team.id}>
+            <img src={team.image} alt={`Team ${team.id}`} className="team" />
+          </div>
+        ))}
+      </div>
+      <div className="round final">
+        {teams.slice(6, 7).map(team => (
+          <div className="matchup" key={team.id}>
+            <img src={team.image} alt={`Team ${team.id}`} className="team" />
+          </div>
+        ))}
+      </div>
+      <div className="champion">
+        <img src="champion.png" alt="Champion" className="team" />
+      </div>
     </div>
   );
 };
+
 
 export default Bracket;
