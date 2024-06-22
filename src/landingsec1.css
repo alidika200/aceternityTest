@@ -1,0 +1,10 @@
+#Mysvg path {
+    stroke-linecap: square;
+    fill-opacity: 0;
+    transition: fill-opacity 1s;
+  }
+  
+  #Mysvg.finished path {
+    fill-opacity: 1;
+  }
+  

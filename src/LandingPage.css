@@ -1,4 +1,11 @@
+/* LandingPage.css */
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 
+/* General styles */
+.landignwrap{
+  margin: 0;
+  font-family: 'ICA Rubrik', sans-serif;
+}
 
 .section {
   width: 100vw;
@@ -8,9 +15,94 @@
   align-items: center;
   font-size: 2em;
   color: white;
+  position: relative; /* Ensure relative positioning */
+}
+/* LandingPage.css */
+
+.section0 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Ensure video doesn't overflow */
 }
 
-#section1 { background-color: #ff5733; }
-#section2 { background-color: #33c1ff; }
-#section3 { background-color: #75ff33; }
-#section4 { background-color: #ff33a8; }
+.section0 video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+
+#section1 {
+  background-color: #333;
+}
+
+#section2 {
+  background-color: #555;
+}
+
+#section3 {
+  background-color: #777;
+}
+
+#section4 {
+  background-color: #999;
+}
+
+/* Split section styles */
+.split-section {
+  display: flex;
+  height: 100vh;
+  position: relative; /* Ensure relative positioning */
+}
+
+.split-left,
+.split-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  opacity: 0.5; /* Lowered opacity */
+}
+
+.split-left:before,
+.split-right:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px; /* Width of the barrier */
+  background-color: white; /* Color of the barrier */
+}
+
+.split-left:hover,
+.split-right:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1; /* Full opacity on hover */
+}
+
+.split-left .split-text {
+  left: 20px;
+}
+
+.split-right .split-text {
+  right: 20px;
+}
+
+.split-text {
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s;
+}
+#section3 { background-color: #33c1ff; }
