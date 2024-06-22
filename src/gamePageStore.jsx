@@ -9,6 +9,7 @@ import ReactPlayer from 'react-player';
 import SideNav from './dropDownNavBar';
 import { useLocation } from 'react-router-dom';
 import API from './apiTest';
+import { TracingBeam } from './components/ui/tracing-beam';
 
 const GamePageStore = () => {
   const location = useLocation();

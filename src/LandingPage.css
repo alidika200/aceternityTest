@@ -1,0 +1,16 @@
+
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+#section1 { background-color: #ff5733; }
+#section2 { background-color: #33c1ff; }
+#section3 { background-color: #75ff33; }
+#section4 { background-color: #ff33a8; }

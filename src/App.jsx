@@ -12,7 +12,7 @@ import CarouselComponent from './CarouselComponent';
 import GamePageLibrary from './gamePageLibrary';
 import GamePageStore from './gamePageStore';
 import Post from './postComponent';
-import { HdRounded } from '@mui/icons-material';
+import { HdRounded, ImportExport } from '@mui/icons-material';
 import SideNav from './dropDownNavBar';
 import LibraryCarousel from './libraryCarousel';
 import Feed from './feed';
@@ -28,8 +28,7 @@ import SignUp2 from './singUp';
 import Community from './community';
 import Bracket from './Bracket';
 import Tournament from './tournamentList';
-import BackgroundGradientAnimationDemo from './TsxComponents/LandingPage';
-
+import LandingPage from './LandinPage';
 
 function App() { 
   return (
@@ -52,7 +51,7 @@ function App() {
   <Route  path="/profile" element={<Profile/>}/>
   <Route  path="/APII" element={<API/>}/>
   <Route  path="/br" element={<Bracket/>}/>
-  <Route  path="/landing" element={<BackgroundGradientAnimationDemo/>}/>
+  <Route  path="/landing" element={<LandingPage/>}/>
  </Routes>
  </BrowserRouter>
   );
