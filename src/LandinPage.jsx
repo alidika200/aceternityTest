@@ -48,7 +48,7 @@ const LandingPage = () => {
         <ThreeDSlider />
       </div>
       <div className="section" id="section1">
-        
+        <img></img>
         </div>
       <div className="section" id="section4">
         <Slider3 />
