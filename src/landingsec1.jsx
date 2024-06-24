@@ -4,7 +4,7 @@ import svg from './example.svg';
 import './landingsec1.css';
 
 const MyComponent = () => (
-
+<div>
   <ReactVivus
     id="foo"
     option={{
@@ -17,6 +17,7 @@ const MyComponent = () => (
     style={{ height: '900px', width: '900px',}}
     callback={console.log}
   />
+  </div>
  
 );
 export default MyComponent;

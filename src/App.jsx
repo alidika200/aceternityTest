@@ -29,13 +29,13 @@ import Community from './community';
 import Bracket from './Bracket';
 import Tournament from './tournamentList';
 import LandingPage from './LandinPage';
-
+import MyComponent from './tester';
 function App() { 
   return (
     <BrowserRouter>
 <Routes>
-  <Route exact path="/" element={<Home/>}/>
-  <Route exact path="/Home" element={<Home/>}/>
+  <Route exact path="/" element={<LandingPage/>}/>
+  <Route exact path="/Home" element={<LandingPage/>}/>
   <Route  path="/feed" element={<Feed/>}/>
   <Route  path="/store" element={<Store/>}/>
   <Route  path="/tournament" element={<Tournament/>}/>
@@ -51,7 +51,7 @@ function App() {
   <Route  path="/profile" element={<Profile/>}/>
   <Route  path="/APII" element={<API/>}/>
   <Route  path="/br" element={<Bracket/>}/>
-  <Route  path="/landing" element={<LandingPage/>}/>
+  {/* <Route  path="/landing" element={<LandingPage/>}/> */}
  </Routes>
  </BrowserRouter>
   );

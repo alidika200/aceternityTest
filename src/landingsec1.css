@@ -1,10 +1,27 @@
 #Mysvg path {
-    stroke-linecap: square;
-    fill-opacity: 0;
-    transition: fill-opacity 1s;
-  }
-  
-  #Mysvg.finished path {
-    fill-opacity: 1;
-  }
-  
+  stroke-linecap: square;
+  fill-opacity: 0;
+  transition: fill-opacity 1s;
+}
+
+#Mysvg.finished path {
+  fill-opacity: 1;
+}
+
+/* Adjustments to.logo5 to ensure proper alignment and sizing */
+.logo5 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url('./assets/wall1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+
+
+
