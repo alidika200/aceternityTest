@@ -1,6 +1,8 @@
 import React from 'react';
 import './3dslider.css';
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect, } from 'react';
 import img1 from './images/The_Witcher_3_Wild_Hunt_Geralt_Ciri_RGB.jpg';
 import img2 from './images/Division.webp';
 import img3 from './images/images (2).jpg';
@@ -14,10 +16,11 @@ import img10 from './images/dragon_10.jpg';
 import modelImg from './images/pngwing.com.png';
 
 const ThreeDSlider = () => {
+  useEffect(() => { Aos.init(); }, []);
   return (
     <section className="threeDSlider-section">
       <div className="threeDSlider-banner">
-        <div className="threeDSlider-slider" style={{ '--quantity': 10 }}>
+        <div className="threeDSlider-slider" style={{ '--quantity': 10 }} data-aos="zoom-in" data-aos-duration="000" data-aos-delay="2300">
           <div className="threeDSlider-item" style={{ '--position': 1 }}>
             <img src={img1} alt="" />
           </div>
@@ -50,13 +53,13 @@ const ThreeDSlider = () => {
           </div>
         </div>
         <div className="threeDSlider-content">
-          <h1 data-content="Player">Player</h1>
+          <h1 data-content="Player" data-aos="fade-right" data-aos-duration="2000">Player</h1>
           <div className="threeDSlider-author">
-            <h2>Game Pedia</h2>
-            <p><b>One Universe</b></p>
-            <p>Gamer Path</p>
+            <h2 data-aos="fade-right" data-aos-duration="2000">Game Pedia</h2>
+            <p data-aos="fade-right" data-aos-duration="2000"><b>One Universe</b></p>
+            <p data-aos="fade-right" data-aos-duration="2000">Gamer Path</p>
           </div>
-          <div className="threeDSlider-model" style={{ backgroundImage: `url(${modelImg})` }}></div>
+          <div className="threeDSlider-model" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000" style={{ backgroundImage: `url(${modelImg})` }}></div>
         </div>
       </div>
     </section>

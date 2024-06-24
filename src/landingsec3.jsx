@@ -18,14 +18,21 @@ import division4 from './images/division4.png';
 import witcher3 from './images/witcher3.png';
 import alien from './images/alien.png';
 import gta from './images/gta.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect, } from 'react';
+
+
+
+
 
 const Slider3 = () => {
+    useEffect(() => { Aos.init(); }, []);
     return (
         <div className="s3wrapper">
-          
-                <h1 className="sec3slideTitle">A Rich Library of Games, Courses and More</h1>
+                <h1 className="sec3slideTitle" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="900" >A Rich Library of Games, Courses and More</h1>
                 <div className="sec3slide s3slider" reverse="false" style={{ '--width': '200px', '--height': '200px', '--quantity': '9', marginBottom: '20px' }}>
-                    <div className="s3list">
+                    <div className="s3list" data-aos="fade-right" data-aos-duration="3000" >
                         <div className="sec3slideItem" style={{ '--position': 1 }}><img src={unity2} alt="" /></div>
                         <div className="sec3slideItem" style={{ '--position': 2 }}><img src={unreal2} alt="" /></div>
                         <div className="sec3slideItem" style={{ '--position': 3 }}><img src={nvidiaLogo} alt="" /></div>
@@ -39,7 +46,7 @@ const Slider3 = () => {
                 </div>
 
                 <div className="sec3slide s3slider" reverse="true" style={{ '--width': '200px', '--height': '200px', '--quantity': '9' }}>
-                    <div className="s3list">
+                    <div className="s3list" data-aos="fade-right" data-aos-duration="3000">
                         <div className="sec3slideItem" style={{ '--position': 1, marginTop: '70px' }}><img src={divisionLogo} alt="" /></div>
                         <div className="sec3slideItem" style={{ '--position': 2, marginTop: '30px' }}><img src={gtav} alt="" /></div>
                         <div className="sec3slideItem" style={{ '--position': 3 }}><img src={ghosts} alt="" /></div>

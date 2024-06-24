@@ -2,10 +2,11 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 .stickWrap {
-	background:#EEF4FF;
+	background:#150232;
 	margin:0;
 	font-family:sans-serif;
-	color:#333;
+	color:#fffefe;
+	font-family: 'ICA Rubrik';
 }
 
 .spacer {
@@ -58,8 +59,8 @@
 
 
 .desktopPhotos {
-	width:40vw;
-	height:40vw;
+	width:45vw;
+	height:30vw;
 	border-radius:20px;
 	position:relative;
 	overflow:hidden;
@@ -73,22 +74,28 @@
 }
 
 
-
-
 .red {
-	background: crimson;
+	background-image: url('./assets/gaming.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .green {
-	background:MediumSeaGreen;
+	background-image: url('./assets/nigro.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .blue {
-	background:dodgerblue;
+	background-image: url('./assets/community.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .pink{
-	background:deepPink;
+	background-image: url('./assets/devs.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 

@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 
 /* General styles */
-.landignwrap{
+.landignwrap {
   margin: 0;
   font-family: 'ICA Rubrik', sans-serif;
 }
@@ -17,7 +17,6 @@
   color: white;
   position: relative; /* Ensure relative positioning */
 }
-/* LandingPage.css */
 
 #section0 {
   background-image: url('./assets/wall1.jpg');
@@ -25,29 +24,41 @@
   background-size: cover;
 }
 
-.section0 video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
+#section1 {
+  background-color: #150232;
 }
 
+#section3 {
+  background-color: #150232;
+  position: relative; /* Ensure relative positioning for absolute child elements */
+}
 
-#section1 {
-  background-color: #dc0a0a;
+#section3 img {
+  width: 50%; /* Adjust as needed */
+  position: absolute;
+  top: 60%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the image */
+  z-index: 2; /* Ensure it overlaps the text */
+}
+
+#section3 h1 {
+  z-index: 1; /* Ensure the text is beneath the image */
+  position: relative; /* Keep text positioned properly */
+  font-family: 'ICA Rubrik';
+  font-size: 100px;
+}
+
+#section3 h1:first-of-type {
+  top: -20%; /* Adjust as needed */
+}
+
+#section3 h1.aa {
+  top: -0%; /* Adjust as needed to position below the first h1 */
 }
 
 #section2 {
   background-color: #555;
-}
-
-#section3 {
-  background-color: #777;
 }
 
 #section4 {
@@ -104,4 +115,3 @@
   opacity: 0; /* Hidden by default */
   transition: opacity 0.3s;
 }
-#section3 { background-color: #33c1ff; }

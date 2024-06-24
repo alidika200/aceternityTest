@@ -24,6 +24,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@tabler/icons-react": "^3.6.0",
     "antd": "^5.17.0",
+    "aos": "^2.3.4",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "clsx": "^2.1.1",
@@ -37,6 +38,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1",
     "react-vivus": "^0.0.2",
+    "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
     "typescript": "^5.5.2",
     "vivus": "^0.4.6"
