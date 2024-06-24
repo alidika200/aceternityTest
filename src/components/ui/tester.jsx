@@ -1,5 +1,5 @@
 import React from 'react';
-import { StickyScrollRevealDemo } from './StickySS';
+import { StickyScrollRevealDemo } from '../../StickySS';
 import { ThreeDCardDemo } from './3DCARD';
 
 const MyComponent = () => {

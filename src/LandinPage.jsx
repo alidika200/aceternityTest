@@ -6,6 +6,7 @@ import Slider3 from './landingsec3';
 import MyComponent from './landingsec1';
 import {StickyScrollRevealDemo} from './StickySS';
 import F3 from './stickyScrollSec';
+import { MacbookScrollDemo } from './components/ui/mcscroll';
 
 
 // Add smooth scroll functionality
@@ -33,6 +34,7 @@ document.addEventListener('wheel', function(event) {
 const LandingPage = () => {
   return (
     <>
+    <MacbookScrollDemo />
     <div className="section" id="section0">
       <MyComponent />
     </div>

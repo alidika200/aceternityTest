@@ -1,5 +1,5 @@
 import React from "react";
-import { MacbookScroll } from "./components/ui/macbook-scroll";
+import { MacbookScroll } from "./macbook-scroll";
 import { Link } from "react-router-dom";
 
 export function MacbookScrollDemo() {

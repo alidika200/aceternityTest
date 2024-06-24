@@ -29,7 +29,7 @@ import Community from './community';
 import Bracket from './Bracket';
 import Tournament from './tournamentList';
 import LandingPage from './LandinPage';
-import MyComponent from './tester';
+import MyComponent from './components/ui/tester';
 function App() { 
   return (
     <BrowserRouter>
