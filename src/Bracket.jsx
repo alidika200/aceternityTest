@@ -144,6 +144,7 @@ const Bracket = () => {
                 <div className="line one"></div>
               </div>
             </div>
+            
           </div>
           <div className="column three">
             <div className="match winner-top">
