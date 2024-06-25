@@ -25,11 +25,11 @@
 }
 
 #section1 {
-  background-color: #150232;
+  background-color: #4a4a4a;
 }
 
 #section3 {
-  background-color: #150232;
+  background-color: #4a4a4a;
   position: relative; /* Ensure relative positioning for absolute child elements */
 }
 

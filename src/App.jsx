@@ -30,6 +30,7 @@ import Bracket from './Bracket';
 import Tournament from './tournamentList';
 import LandingPage from './LandinPage';
 import MyComponent from './components/ui/tester';
+import CustomStorePage from './customStorePage';
 function App() { 
   return (
     <BrowserRouter>
@@ -51,6 +52,7 @@ function App() {
   <Route  path="/profile" element={<Profile/>}/>
   <Route  path="/APII" element={<API/>}/>
   <Route  path="/br" element={<Bracket/>}/>
+  <Route  path="/cccc" element={<CustomStorePage/>}/>
  </Routes>
  </BrowserRouter>
   );

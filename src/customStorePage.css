@@ -1,0 +1,656 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+
+/* General styles */
+.customStore-wrap {
+  margin: 0;
+  font-family: 'ICA Rubrik', sans-serif;
+}
+
+.customStore-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  position: relative;
+}
+#customStore-section0 button:hover{
+  background-color: black;
+
+}
+/* Section 0 */
+#customStore-section0 {
+  background-image: url('./assets/cp1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.CustomPageBuy {
+  width: 120px;
+  height: 40px;
+  background-color: #e40037;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 80px;
+  left: 150px;
+}
+
+.CustomPagedesc {
+  width: 600px;
+  margin-top: 400px;
+  margin-right: 700px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+/* Section 1 */
+#customStore-section1 {
+  background-color: rgb(22, 14, 44);
+  position: relative;
+}
+
+.aboutGameText {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  font-size: 28px;
+  color: white;
+}
+
+.videoAbout {
+  display: flex;
+  position: relative;
+  margin-top: 50px; /* Adjust as necessary to create space from the top */
+}
+
+.cpVideo {
+  width: 935px;
+  height: 530px;
+  background-color: black; /* Placeholder color */
+}
+
+.cpAbout {
+  width: 410px;
+  margin-top: 130px;
+  margin-left: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+.catchyphrase {
+  position: absolute;
+  width: 430px;
+  top: 340px;
+  left: 110px;
+  color: white;
+  padding: 5px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* Section 2 */
+#customStore-section2 {
+  background-color: #1f0909;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.redbg {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 1));
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+}
+
+.section2-title {
+  width: 600px;
+  font-size: 50px;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  z-index: 2;
+}
+
+.expansiontext {
+  position: absolute;
+  width: 450px;
+  top: 60%;
+  left: 15%;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.cpFig {
+  position: absolute;
+  top: 0;
+  left: 700px;
+  z-index: 3;
+  width: 1200px;
+  height: 1200px;
+}
+
+/* Section 3 */
+#customStore-section3 {
+  background-color: #000000;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.redbg1 {
+  position: absolute;
+  width: 94vw;
+  height: 80vh;
+  background: #fced52;
+  z-index: 1;
+}
+
+.aboutGameText1 {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  z-index: 5;
+}
+
+.cards-container {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 2;
+}
+
+.columnCustom {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.cardCustomS {
+  background-color:rgba(241,227,79,255);
+  width: 400px;
+  height: 150px;
+  border: #000000 0px solid;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(2, 2, 2);
+  font-size: 15px;
+}
+.cardCustomS:hover {
+  background-color:rgb(0, 0, 0);
+  width: 400px;
+  height: 150px;
+  border: #000000 0px solid;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+.cpFig1 {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 3;
+  width: 700px;
+  height: 800px;
+}
+
+/* Section 4 */
+#customStore-section4 {
+  background-color: rgb(22, 14, 44);
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  padding-top: 50px; 
+  width: 100vw; 
+ padding-left: 70px;
+  z-index: 8;
+}
+.aboutGameText4 {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  z-index: 5;
+}
+
+.IMGcolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  margin: 15px; 
+}
+
+
+.IMGcolumn img {
+  margin: 10px 0;
+}
+
+.pic1 {
+  width: 450px;
+  height: 550px;
+}
+
+.pic2 {
+  width: 450px;
+  height: 250px;
+}
+
+.pic3 {
+  width: 450px;
+  height: 250px;
+}
+
+.pic4 {
+  width: 450px;
+  height: 150px;
+}
+
+.pic5 {
+  width: 450px;
+  height: 430px;
+}
+
+/* Section 5 */
+#customStore-section5 {
+  background-color:rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section5-container {
+  position: relative;
+}
+
+.section5-image {
+  border-radius: 10px;
+  width: 1500px;
+  height: 750px;
+  display: block;
+  margin: 0 auto;
+}
+
+.section5-text1, .section5-text2 {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.section5-text1 {
+  width: 500px;
+  font-size: 50px;
+  bottom: 30px;
+  left: 80px;
+}
+
+.section5-text2 {
+  width: 500px;
+  font-size: 18px;
+  bottom: 70px;
+  right: 40px;
+}
+
+#customStore-section6 {
+  background-color: #7a7a7a;
+}
+
+/* Section 7 */
+#customStore-section7 {
+  background-color: #8a8a8a;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section7-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px; /* Adjust as needed */
+  height: 80%; /* Adjust height as needed */
+}
+
+.section7-text {
+  width: 45%;
+  padding: 20px;
+  text-align: left;
+  color: white;
+}
+
+.section7-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section7-text p {
+  font-size: 18px;
+}
+
+.section7-image {
+ right: 8000px;
+}
+.section7-image img {
+  width: 150px;
+  height: 150px;
+}
+.section7-image2 img {
+  width: 600px;
+  height:600px;
+}
+
+.section7-image3 img {
+width: 350px;
+  height:350px;
+}
+
+/* Section 8 */
+#customStore-section10 {
+  z-index: 50;
+  background-color:rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section10-container {
+  position: relative;
+}
+
+.section10-image {
+  margin-bottom: 80px;
+  border-radius: 10px;
+  width: 1200px;
+  height: 550px;
+  display: block;
+  
+}
+
+.section10-text1 {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.section10-text1 {
+  width: 400px;
+  font-size: 40px;
+  bottom: 170px;
+  left: 80px;
+}
+.wiwi2{
+position:absolute;
+  font-size: 15px;
+  left: 545px;
+  bottom: 35px;
+  z-index: 12;
+  
+}
+.IGI{
+  position: relative;
+  left: 480px;
+  bottom: 40px;
+  width: 12em;
+  height: 4em;
+  outline: none;
+  transition: 0.1s;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ddebf0;
+}
+
+#clip {
+  --color: #2761c3;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 5px double var(--color);
+  box-shadow: inset 0px 0px 15px #195480;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.aarrow {
+  position: absolute;
+  transition: 0.2s;
+  background-color: #2761c3;
+  top: 35%;
+  width: 11%;
+  height: 30%;
+}
+
+#leftArrow {
+  left: -13.5%;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+  -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+  left: 109%;
+}
+
+.IGI:hover #rightArrow {
+  background-color: #27c39f;
+  left: -15%;
+  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+.IGI:hover #leftArrow {
+  background-color: #27c39f;
+  left: 103%;
+  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: #2761c3;
+  box-shadow: inset 1px 1px 8px #2781c3;
+  transform: scale(1) rotate(45deg);
+  transition: 0.2s;
+}
+
+#rightTop {
+  top: -1.98em;
+  left: 91%;
+}
+
+#leftTop {
+  top: -1.96em;
+  left: -3.0em;
+}
+
+#leftBottom {
+  top: 2.10em;
+  left: -2.15em;
+}
+
+#rightBottom {
+  top: 45%;
+  left: 88%;
+}
+
+.IGI:hover #leftTop {
+  animation: 0.1s ease-in-out 0.05s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.IGI:hover #rightTop {
+  animation: 0.1s ease-in-out 0.15s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.IGI:hover #rightBottom {
+  animation: 0.1s ease-in-out 0.25s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.IGI:hover #leftBottom {
+  animation: 0.1s ease-in-out 0.35s both changeColor8,
+  0.2s linear 0.4s both lightEffect8;
+}
+
+.IGI:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+.IGI:hover #clip {
+  animation: 0.2s ease-in-out 0.55s both greenLight8;
+  --color: #27c39f;
+}
+
+@keyframes changeColor8 {
+  from {
+    background-color: #2781c3;
+  }
+
+  to {
+    background-color: #27c39f;
+  }
+}
+
+@keyframes lightEffect8 {
+  from {
+    box-shadow: 1px 1px 5px #27c39f;
+  }
+
+  to {
+    box-shadow: 0 0 2px #27c39f;
+  }
+}
+
+@keyframes greenLight8 {
+  from {
+  }
+
+  to {
+    box-shadow: inset 0px 0px 32px #27c39f;
+  }
+}
+
+@keyframes leftArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes rightArrow8 {
+  from {
+    transform: translate(0px);
+  }
+
+  to {
+    transform: translateX(-10px);
+  }
+}
+
+
+#customStore-section0 button:hover{
+  background-color: black;
+
+}
+
+
+
+#customStore-sectionre {
+  background-color: rgb(22, 14, 44);;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+
+.sectionre-title {
+  width: 320px;
+  font-size: 50px;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  z-index: 2;
+}
+
+.expansiontextre {
+  position: absolute;
+  width: 450px;
+  top: 45%;
+  left: 10%;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.cpFigsectionre {
+  position: absolute;
+  top: 200px;
+  left: 850px;
+  z-index: 3;
+  width: 240px;
+  height: 240px;
+}
+.cpFigsectionre2 {
+  position: absolute;
+  top: 200;
+  left: 700px;
+  z-index: 3;
+  width: 1000px;
+  height: 900px;
+}
+
+.cpFigsectionre3{
+  position: absolute;
+  top: 320px;
+  left: 900px;
+  z-index: 3;
+  width: 400px;
+  height: 400px;
+}
+
