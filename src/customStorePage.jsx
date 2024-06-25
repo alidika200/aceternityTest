@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './customStorePage.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -20,19 +20,43 @@ import SideNav from './dropDownNavBar';
 const CustomStorePage = () => {
   useEffect(() => {
     Aos.init();
+
+    const sections = document.querySelectorAll('.customStore-section');
+    let currentSectionIndex = 0;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            currentSectionIndex = [...sections].indexOf(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    const handleWheel = (event) => {
+      if (event.deltaY > 0) {
+        if (currentSectionIndex < sections.length - 1) {
+          sections[currentSectionIndex + 1].scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        if (currentSectionIndex > 0) {
+          sections[currentSectionIndex - 1].scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel);
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      observer.disconnect();
+    };
   }, []);
 
-  const [hoveredText, setHoveredText] = useState('');
-
-  // Function to handle mouse enter event on cards
-  const handleMouseEnter = (text) => {
-    setHoveredText(text); // Update state with hovered card's text
-  };
-
-  // Function to handle mouse leave event on cards (reset text)
-  const handleMouseLeave = () => {
-    setHoveredText('');}; // Reset state to empty string when mouse leaves
-  
   return (
     <>
       <div>
@@ -56,12 +80,12 @@ const CustomStorePage = () => {
       </div>
       
       <div className="customStore-section" id="customStore-section5">
-  <div className="section5-container">
-    <img src={pic6} alt="Large Image" className="section5-image" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
-    <p className="section5-text1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Explore The City Of The Future</p>
-    <p className="section5-text2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Night City is packed to the brim with things to do, places to see, and people to meet. And it's up to you where to go, when to go, and how to get there.</p>
-  </div>
-</div>
+        <div className="section5-container">
+          <img src={pic6} alt="Large Image" className="section5-image" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
+          <p className="section5-text1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Explore The City Of The Future</p>
+          <p className="section5-text2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Night City is packed to the brim with things to do, places to see, and people to meet. And it's up to you where to go, when to go, and how to get there.</p>
+        </div>
+      </div>
       <div className="customStore-section" id="customStore-section2">
         <div className='redbg' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"></div>
         <h1 className='section2-title' data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Phantom Liberty expansion Content</h1>
@@ -69,82 +93,74 @@ const CustomStorePage = () => {
         <img src={characterImage} className='cpFig' alt='Character' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
       </div>
       <div className="customStore-section" id="customStore-section4">
-      <p className="aboutGameText4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Media</p>
+        <p className="aboutGameText4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Media</p>
         <div className="IMGcolumn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
           <img src={pic1} className="pic1" alt="Pic 1" />
         </div>
-        <div className="IMGcolumn"data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div className="IMGcolumn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
           <img src={pic2} className="pic2" alt="Pic 2" />
           <img src={pic3} className="pic3" alt="Pic 3" />
         </div>
-        <div className="IMGcolumn"data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div className="IMGcolumn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
           <img src={pic4} className="pic4" alt="Pic 4" />
           <img src={pic5} className="pic5" alt="Pic 5" />
-          
         </div>
       </div>
       <div className="customStore-section" id="customStore-section3">
-      <p className="aboutGameText1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-        Requirements
-      </p>
-      <div className='redbg1'></div>
-      <div className='cards-container'>
-        <div className='columnCustom' data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-          <div className='cardCustomS' onMouseEnter={() => handleMouseEnter('Hardware')} onMouseLeave={handleMouseLeave}>
-            Hardware
+        <p className="aboutGameText1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+          Requirements
+        </p>
+        <div className='redbg1'></div>
+        <div className='cards-container'>
+          <div className='columnCustom' data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+            <div className='cardCustomS'>
+              Hardware
+            </div>
+            <div className='cardCustomS'>
+              Software
+            </div>
+            <div className='cardCustomS'>
+              Accounts
+            </div>
           </div>
-          <div className='cardCustomS' onMouseEnter={() => handleMouseEnter('Software')} onMouseLeave={handleMouseLeave}>
-            Software
-          </div>
-          <div className='cardCustomS' onMouseEnter={() => handleMouseEnter('Accounts')} onMouseLeave={handleMouseLeave}>
-            Accounts
+          <div className='columnCustom' data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+            <div className='cardCustomS'>
+              Pre Requisite
+            </div>
+            <div className='cardCustomS'>
+              Network
+            </div>
+            <div className='cardCustomS'>
+              Skills
+            </div>
           </div>
         </div>
-        <div className='columnCustom' data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
-          <div className='cardCustomS' onMouseEnter={() => handleMouseEnter('Pre Requisite')} onMouseLeave={handleMouseLeave}>
-            Pre Requisite
-          </div>
-          <div className='cardCustomS' onMouseEnter={() => handleMouseEnter('Network')} onMouseLeave={handleMouseLeave}>
-            Network
-          </div>
-          <div className='cardCustomS' onMouseEnter={() => handleMouseEnter('Skills')} onMouseLeave={handleMouseLeave}>
-            Skills
-          </div>
-        </div>
+        <img src={characterImage1} className='cpFig1' alt='Character' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
       </div>
-      {/* Display hovered text conditionally */}
-      {hoveredText && (
-        <div className="hovered-text">
-          <p>{hoveredText}</p>
-        </div>
-      )}
-      <img src={characterImage1} className='cpFig1' alt='Character' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
-    </div>
       <div className="customStore-section" id="customStore-sectionre">
-       
         <h1 className='sectionre-title' data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">Play Hard Get Rewards</h1>
         <p className='expansiontextre' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Official Tournaments Hosted By US and By CDPROJEKTRED only for the best edge runners in all of night city, play as V and Dante in the ultimate Arena and WIn cool reewards.</p>
         <img src={pic7} className='cpFigsectionre' alt='Character' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
         <img src={pic8} className='cpFigsectionre2' alt='Character' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
         <img src={pic9} className='cpFigsectionre3' alt='Character' data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
       </div>
-<div className="customStore-section" id="customStore-section10">
-  <div className="section10-container">
-    <img src={pic10} alt="Large Image" className="section10-image" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
-    <p className="section10-text1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Get Into Night City Now!</p>
-    <p className='wiwi2' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Play</p>
-    <div className='IGI' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-    <div id="clip">
-        <div id="leftTop" className="corner"></div>
-        <div id="rightBottom" className="corner"></div>
-        <div id="rightTop" className="corner"></div>
-        <div id="leftBottom" className="corner"></div>
-    </div>
-    <span id="rightArrow" className="aarrow"></span>
-    <span id="leftArrow" className="aarrow"></span>
-</div>
-  </div>
-</div>
+      <div className="customStore-section" id="customStore-section10">
+        <div className="section10-container">
+          <img src={pic10} alt="Large Image" className="section10-image" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="200" />
+          <p className="section10-text1" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">Get Into Night City Now!</p>
+          <p className='wiwi2' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Play</p>
+          <div className='IGI' data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div id="clip">
+              <div id="leftTop" className="corner"></div>
+              <div id="rightBottom" className="corner"></div>
+              <div id="rightTop" className="corner"></div>
+              <div id="leftBottom" className="corner"></div>
+            </div>
+            <span id="rightArrow" className="aarrow"></span>
+            <span id="leftArrow" className="aarrow"></span>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

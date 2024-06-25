@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './community.css';
 import profilePic from './assets/shitpost.jpg';
 import pro1 from './assets/unnamed.webp';
 import Header from './Layout';
 import division from './assets/division.jpg';
-import logo from './assets/witcherlogo.jpg';
+import logo25 from './assets/witcherlogo.jpg';
 import SideNav from './dropDownNavBar';
 import Post from './postComponent';
 import { Link } from 'react-router-dom';
-import witcher3image from './assets/witcher3.jpg';
 import witcher3image1 from './assets/witcher3image1.jpg';
 import witcher3image2 from './assets/witcher3image2.jpg';
 import witcher3image3 from './assets/witcher3image3.jpg';
-import logo25 from './assets/witcherlogo.jpg';
+import UpperNavBar from './upperNavbar';
+import PostPopup from './postpopup';
 
 const Community = () => {
+  const [popupType, setPopupType] = useState(null);
+
+  const handlePostTypeSelected = (type) => {
+    setPopupType(type);
+  };
+
+  const handlePopupClose = () => {
+    setPopupType(null);
+  };
+
+  const handlePostSubmit = (postData) => {
+    console.log('Post submitted:', postData);
+  };
+
   const gameData = {
     gameName: "The Witcher 3: Wild Hunt",
     studioName: "CD Projekt Red",
@@ -40,6 +54,7 @@ const Community = () => {
     <>
       <Header playerName="Ali" backgroundImage={profilePic} />
       <SideNav />
+      <UpperNavBar onPostTypeSelected={handlePostTypeSelected} />
       <div className="communityLayout">
         <div className="feed2">
           <Post userImage={pro1} userName="Ali" mediaUrl={witcher3image2} postText="Wow this game is rad" />
@@ -72,6 +87,7 @@ const Community = () => {
           </div>
         </div>
       </div>
+      {popupType && <PostPopup type={popupType} onClose={handlePopupClose} onSubmit={handlePostSubmit} />}
     </>
   );
 };

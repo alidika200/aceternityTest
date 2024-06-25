@@ -9,25 +9,25 @@ import UpperNavBar from './upperNavbar';
 import PostPopup from './postpopup';
 
 const Feed = () => {
-  const [popupType, setPopupType] = useState(null);
+  // const [popupType, setPopupType] = useState(null);
 
-  const handlePostTypeSelected = (type) => {
-    setPopupType(type);
-  };
+  // const handlePostTypeSelected = (type) => {
+  //   setPopupType(type);
+  // };
 
-  const handlePopupClose = () => {
-    setPopupType(null);
-  };
+  // const handlePopupClose = () => {
+  //   setPopupType(null);
+  // };
 
-  const handlePostSubmit = (postData) => {
-    console.log('Post submitted:', postData);
-  };
+  // const handlePostSubmit = (postData) => {
+  //   console.log('Post submitted:', postData);
+  // };
 
   return (
     <>
       <Header playerName="Ali" backgroundImage={profilePic} />
       <SideNav />
-      <UpperNavBar onPostTypeSelected={handlePostTypeSelected} />
+      {/* <UpperNavBar onPostTypeSelected={handlePostTypeSelected} /> */}
       <div className="feed">
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
@@ -36,7 +36,7 @@ const Feed = () => {
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
         <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
       </div>
-      {popupType && <PostPopup type={popupType} onClose={handlePopupClose} onSubmit={handlePostSubmit} />}
+      {/* {popupType && <PostPopup type={popupType} onClose={handlePopupClose} onSubmit={handlePostSubmit} />} */}
     </>
   );
 };
