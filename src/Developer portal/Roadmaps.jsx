@@ -1,5 +1,6 @@
 import React from 'react';
 import './roadmaps.css';
+import { Link } from 'react-router-dom';
 import {
     AppstoreOutlined,
     PieChartOutlined,
@@ -18,8 +19,10 @@ const Roadmap = () => {
                 <input type="radio" name="devSlide" id="c1" defaultChecked />
                 <label htmlFor="c1" className="devCard">
                     <div className="devrow">
+                        <Link to="/introdev">
                         <div className="delete"><ShoppingCartOutlined /></div>
-                        <a href="info.html" className="devicon"><i className='bx bxs-detail'></i></a>
+                        </Link>
+                        <a  className="devicon"><i className='bx bxs-detail'></i></a>
                         <div className="devdesc">
                             <h4>Game Design</h4>
                             <p>Intro to Game Development</p>
@@ -30,7 +33,7 @@ const Roadmap = () => {
                 <label htmlFor="c2" className="devCard">
                     <div className="devrow">
                         <div className="delete"><ShoppingCartOutlined /></div>
-                        <a href="info.html" className="devicon"><i className='bx bxs-detail'></i></a>
+                        <a  className="devicon"><i className='bx bxs-detail'></i></a>
                         <div className="devdesc">
                             <h4>Level Building</h4>
                             <p>Build Game levels and maps using Unity!</p>
@@ -41,7 +44,7 @@ const Roadmap = () => {
                 <label htmlFor="c3" className="devCard">
                     <div className="devrow">
                         <div className="delete"><ShoppingCartOutlined /></div>
-                        <a href="info.html" className="devicon"><i className='bx bxs-detail'></i></a>
+                        <a  className="devicon"><i className='bx bxs-detail'></i></a>
                         <div className="devdesc">
                             <h4>Coding</h4>
                             <p>Game Programming Using C#</p>
@@ -52,7 +55,7 @@ const Roadmap = () => {
                 <label htmlFor="c4" className="devCard">
                     <div className="devrow">
                         <div className="delete"><ShoppingCartOutlined /></div>
-                        <a href="info.html" className="devicon"><i className='bx bxs-detail'></i></a>
+                        <a className="devicon"><i className='bx bxs-detail'></i></a>
                         <div className="devdesc">
                             <h4>Character Design</h4>
                             <p>Let's start building our favorite characters</p>
