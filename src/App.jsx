@@ -32,6 +32,7 @@ import LandingPage from './LandinPage';
 import MyComponent from './components/ui/tester';
 import CustomStorePage from './customStorePage';
 import Cart from './checkout';
+import Roadmap from './Developer portal/Roadmaps';
 function App() { 
   return (
     <BrowserRouter>
@@ -55,6 +56,7 @@ function App() {
   <Route  path="/br" element={<Bracket/>}/>
   <Route  path="/cccc" element={<CustomStorePage/>}/>
   <Route  path="/checkout" element={<Cart/>}/>
+  <Route  path="/paths" element={<Roadmap/>}/>
 
  </Routes>
  </BrowserRouter>
