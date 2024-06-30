@@ -25,11 +25,13 @@ const Store = () => {
    backgroundImage = {profilePic}/> 
 
 <SideNav></SideNav>
-<div className='gg1'>
+{/* <div className='gg1'>
 
 <CarouselComponent game1="The Witcher 3 Wild Hunt"game2="Tom Clancy's the Division 2" game3="Hell Divers"  phrase2="" phrase3="" image1={witcher3image} image2={division} image3={helldiver} />
-</div>
+</div> */}
 
+<a href="#" class="glitch" data-glitch="Explore">Explore</a>
+<div className="card-wrap">
       <p className='card-cat' >Online Only Games</p>
 
      <div className="card-row">
@@ -240,6 +242,7 @@ const Store = () => {
         backgroundImage={helldiver}
       />
   </div> 
+  </div>
   </div>
     </>
  );

@@ -1,0 +1,14 @@
+.pricing-container {
+    display: flex;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Centers the cards vertically */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #000000;; /* Optional background color */
+    padding: 20px; /* Optional padding */
+  }
+  
+  .pricing-card {
+    margin: 10px; /* Space between the cards */
+  }
+  

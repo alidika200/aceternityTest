@@ -7,6 +7,9 @@
   height: 80px;
   z-index: 1000; 
   }
+  h3{
+   margin-top: 15px;
+  }
   .Logo{
     font-size: 20px;
     margin-left: 30px;

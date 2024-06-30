@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -9,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
+import Bookmark from '@mui/icons-material/Bookmark';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import profilePic from './assets/witcherlogo.jpg'
@@ -79,6 +81,14 @@ export default function AccountMenu() {
         
         <Divider />
         <MenuItem onClick={handleClose}>
+        <Link to="/savedpost">
+          <ListItemIcon>
+            <Bookmark fontSize="small" />
+          </ListItemIcon>
+          Saved post
+         </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
@@ -90,6 +100,7 @@ export default function AccountMenu() {
           </ListItemIcon>
           Logout
         </MenuItem>
+        
       </Menu>
     </React.Fragment>
   );

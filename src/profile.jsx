@@ -3,14 +3,19 @@ import './profile.css';
 import profilePic from './assets/debovxe-d9b6da12-ac0b-4e07-b12b-8021c24abfc7.jpg';
 import SideNav from './dropDownNavBar';
 import Header from './Layout';
+import {
+    HeartFilled,
+    TrophyFilled
+  } from '@ant-design/icons';
+import { Margin } from '@mui/icons-material';
 
 const Profile = () => {
     return (
         <>
-        <Header playerName ="Ali"
-   backgroundImage = {profilePic}/> 
-        <SideNav></SideNav>
+       
         <div className='centeringTT'>
+        <Header playerName ="Ali"backgroundImage = {profilePic}/> 
+        <SideNav></SideNav>
             <div className="Profile-container">
                 <div className='rowpro'>
                 <div className="profilePage">
@@ -39,9 +44,7 @@ const Profile = () => {
                             <p>Developer</p>
                             <div className="icons">
                                 <span>🎥</span>
-                                <span>🎮</span>
-                                
-                                
+                                <span>🎮</span>  
                             </div>
                         </div>
                     </div>
@@ -49,15 +52,14 @@ const Profile = () => {
                 </div>
 
                 <div className="stats">
-                    <h3>Stats</h3>
-                    <p>❤️ 1500</p>
-                    <p>🏆 9</p>
-                    <p>💬 12</p>
+                    <h3 className='h3stat'>Stats</h3>
+                     <p><HeartFilled /> 1500</p>
+                      <p style={{ marginRight: 30, marginTop:10, marginBottom:80 }}><TrophyFilled /> 9</p>
                 </div>
-</div>
+                </div>
                 <div className="profile-content">
                     <div className="most-played">
-                        <h3>Most Played</h3>
+                        <h3>Last Played</h3>
                         <img src="path/to/witcher_image.jpg" alt="The Witcher 3 Wild Hunt" />
                     </div>
                     <div className="artwork">
@@ -89,5 +91,4 @@ const Profile = () => {
         </>
     );
 };
-
 export default Profile;

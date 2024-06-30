@@ -11,7 +11,7 @@ const Friends = () => {
     <div className='friendwrap11'>
        <Header playerName="Ali" backgroundImage={profilePic} /> 
        <SideNav></SideNav>
-       <p className='card-cat3' >Your Games</p>
+       <p className='card-cat3' >Friends</p>
        <div className="card-row3">
             <UserCard userid="1" userImage={profilePic} userName="Ali" />                 
             <UserCard userid="2" userImage={profilePic} userName="Ali" />         

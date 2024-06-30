@@ -1,28 +1,31 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Tooltip } from 'antd';
+import { Tooltip, Menu } from 'antd';
+
 import './dropDownNavBar.css';
 import {
   AppstoreOutlined,
   PieChartOutlined,
   HomeOutlined,
   ShoppingOutlined,
+  ShopOutlined,
   StarOutlined,
   TeamOutlined,
+  TrophyOutlined
 } from '@ant-design/icons';
-import { Menu } from 'antd';
 
 const SideNav = () => {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
-  
-  // Determine initial selected key based on current location
+
   const initialSelectedKey = () => {
     switch (location.pathname) {
       case '/feed':
         return '1';
       case '/store':
-        return '3';
+        return '3-1';
+      case '/wishlist':
+        return '3-2';
       case '/library':
         return '4';
       case '/tournament':
@@ -43,17 +46,17 @@ const SideNav = () => {
   };
 
   const handleMenuClick = (e) => {
-    setSelectedKey(e.key); // Update the selected key based on the clicked menu item
+    setSelectedKey(e.key);
   };
 
   return (
     <div
       style={{
         position: 'fixed',
-        width: 72,
+        width: collapsed ? 80 : 90,
         left: 0,
         marginTop: 80,
-        overflowY: 'auto',
+       
         borderRadius: 15,
         zIndex: 1000,
         transition: 'width 0.3s ease',
@@ -63,68 +66,63 @@ const SideNav = () => {
         mode="inline"
         theme="dark"
         inlineCollapsed={collapsed}
-        onClick={handleMenuClick} // Handle click event to update selected key
-        selectedKeys={[selectedKey]} // Dynamically set selected keys based on state
+        onClick={handleMenuClick}
+        selectedKeys={[selectedKey]}
         style={{
           backgroundColor: 'inherit',
         }}
       >
         <Menu.Item key="1">
-            <Tooltip title="Feed" placement="right">
-          <Link to="/feed">
-
+          <Tooltip title="Feed" placement="right">
+            <Link to="/feed">
               <HomeOutlined />
-          </Link>
-
-            </Tooltip>
-        </Menu.Item>
-        
-        <Menu.Item key="3">
-            <Tooltip title="Store" placement="right">
-          <Link to="/store">
-
-              <ShoppingOutlined />
-          </Link>
-
-            </Tooltip>
+            </Link>
+          </Tooltip>
         </Menu.Item>
        
-        <Menu.Item key="4">
-            <Tooltip title="Library" placement="right">
-          <Link to="/library">
-
-              <AppstoreOutlined />
+        <Menu.SubMenu key="3" icon={<ShopOutlined />}>
+          <Menu.Item key="3-1" >
+            <Link to="/store">
               
-              </Link>
+              <ShoppingOutlined />
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="3-2">
+            <Link to="/wishlist">
+            <StarOutlined />
+            </Link>
+          </Menu.Item>
+        </Menu.SubMenu>
 
-            </Tooltip>
+        <Menu.Item key="4">
+          <Tooltip title="Library" placement="right">
+            <Link to="/library">
+              <AppstoreOutlined />
+            </Link>
+          </Tooltip>
         </Menu.Item>
         <Menu.Item key="5">
-
-            <Tooltip title="Tournament" placement="right">
-          <Link to="/tournament">
-              <StarOutlined />
-              </Link>
-            </Tooltip>
+          <Tooltip title="Tournament" placement="right">
+            <Link to="/tournament">
+              <TrophyOutlined />
+            </Link>
+          </Tooltip>
         </Menu.Item>
         <Menu.Item key="6">
-            <Tooltip title="Friends" placement="right">
-          <Link to="/friends">
+          <Tooltip title="Friends" placement="right">
+            <Link to="/friends">
               <TeamOutlined />
-          </Link>
-            </Tooltip>
+            </Link>
+          </Tooltip>
         </Menu.Item>
         <Menu.Item key="2">
-          
-            <Tooltip title="Dashboard" placement="right">
+          <Tooltip title="Dashboard" placement="right">
             <Link to="/dashboard">
               <PieChartOutlined />
-              </Link>
-            </Tooltip>
-          
+            </Link>
+          </Tooltip>
         </Menu.Item>
       </Menu>
-    
     </div>
   );
 };

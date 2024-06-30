@@ -34,6 +34,11 @@ import CustomStorePage from './customStorePage';
 import Cart from './checkout';
 import Roadmap from './Developer portal/Roadmaps';
 import CPLUS from './Developer portal/track';
+import FullComponent from './Developer portal/opening';
+import Pricing from './Developer portal/pricing';
+import Wishlist from './wishlits';
+import Savedfeed from './savedPosts';
+
 function App() { 
   return (
     <BrowserRouter>
@@ -58,7 +63,13 @@ function App() {
   <Route  path="/cccc" element={<CustomStorePage/>}/>
   <Route  path="/checkout" element={<Cart/>}/>
   <Route  path="/paths" element={<Roadmap/>}/>
+  <Route  path="/hero" element={<FullComponent/>}/>
   <Route  path="/introdev" element={<CPLUS/>}/>
+  <Route  path="/pricing" element={<Pricing/>}/>
+  <Route  path="/wishlist" element={<Wishlist/>}/>
+  <Route  path="/savedpost" element={<Savedfeed/>}/>
+
+
 
  </Routes>
  </BrowserRouter>

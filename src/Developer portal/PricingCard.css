@@ -1,0 +1,60 @@
+.pricing-card {
+    background-color: black;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    color: white;
+    border: 1px solid #FFF078 ;
+  }
+  
+  .pricingcontent {
+    margin-bottom: 1rem;
+  }
+  
+  .pricingtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color :#FF4191;
+  }
+  
+  .pricingdescription {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #d1d5db; /* Light gray */
+  }
+  
+  .pricingprice {
+    margin-top: 1rem;
+  }
+  
+  .pricingamount {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  
+  .pricingper-month {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .pricingbutton-container {
+    margin-top: 1rem;
+  }
+  
+  .pricingbutton {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .pricingbutton:hover {
+    background-color: transparent;
+    color: white;
+  }
+  

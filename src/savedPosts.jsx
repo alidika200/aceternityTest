@@ -8,7 +8,7 @@ import Post from './postComponent';
 import UpperNavBar from './upperNavbar';
 import PostPopup from './postpopup';
 
-const Feed = () => {
+const SavedFeed = () => {
   // const [popupType, setPopupType] = useState(null);
 
   // const handlePostTypeSelected = (type) => {
@@ -25,24 +25,24 @@ const Feed = () => {
 
   return (
     <>
-   
       {/* <UpperNavBar onPostTypeSelected={handlePostTypeSelected} /> */}
       <div className="feed">
-      <Header playerName="Ali" backgroundImage={profilePic} />
-      <SideNav />
-      <h1  style={{ color: 'white' }}>Feed</h1>
+        <Header playerName="Ali" backgroundImage={profilePic} />
+        <SideNav />
+
+        <h1  style={{ color: 'white' }}>Saved posts</h1>
         <div className='posts'>
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
-        <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
-      </div>
+          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+          <Post userImage={profilePic} userName="Ali" mediaUrl={division} postText="Wow this game is rad" />
+        </div>
       </div>
       {/* {popupType && <PostPopup type={popupType} onClose={handlePopupClose} onSubmit={handlePostSubmit} />} */}
     </>
   );
 };
 
-export default Feed;
+export default SavedFeed;

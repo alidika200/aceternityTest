@@ -1,0 +1,233 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .apphero {
+    display: flex;
+    flex-direction: column;
+
+    
+    overflow: hidden; 
+    background-color: #000000;
+    text-align: center;
+  }
+  
+  .headerhero {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000000;
+    width: 100%; /* Ensure header takes full width */
+  }
+  
+  .logohero {
+    color: #FF4191;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .navhero{
+    margin-left: 530px;
+  }
+  
+  .navhero a {
+    margin: 0 22px;
+    text-decoration: none;
+    color: #FF4191;
+  }
+  
+  .signuphero {
+    background-color: #FF4191;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .herohero {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #000000;
+    overflow: hidden; /* Ensure no horizontal scroll */
+    width: 100%; /* Ensure hero section takes full width */
+  }
+  
+  .hero-texthero {
+    margin-left: 40px;
+    margin-top: 40px;
+    text-align: left;
+
+ 
+  }
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+}
+  
+  .hero-texthero h1 {
+    width: 400px;
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    color: #FFF078;
+  }
+  
+  .hero-texthero h1 span {
+    color: #FF4191;
+  }
+  .hero-texthero p span {
+    color: #FF4191;
+  }
+  
+  
+  .hero-texthero p {
+    margin-left: 40px;
+    width: 500px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: white;
+  }
+  
+  .contacthero {
+    background-color: #9f8dfd;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 40px;
+  }
+  
+  .statshero {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .statshero div {
+    margin-right: 30px;
+    font-size: 18px;
+  }
+  
+  .neon-border{
+    
+    filter: drop-shadow(0 0 20px #FF4191);
+  }
+  
+  .hero-imagehero {
+    margin-right: 140px;
+    margin-top: 250px;
+    position: relative;
+    flex: 1;
+    
+    display: flex;
+
+    filter: drop-shadow(0 0 10px #FF4191);
+    /* justify-content: center;
+    align-items: center; */
+  }
+  
+  .hero-imagehero img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .learning-charthero {
+    width: 230px;
+    height: 280px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFF078;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .learning-charthero img {
+    margin-top: 25px;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  
+  .courseshero {
+    padding: 60px 40px;
+    background-color: 000000;
+    width: 100%; /* Ensure courses section takes full width */
+  }
+  
+  .courseshero h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .course-listhero {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  }
+  
+  .coursehero1 {
+    background-color: #FF4191;
+    color: white;
+    padding: 80px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    height: 200px;
+    width: 150px;
+    text-align: center;
+    margin: 10px; /* Add margin for spacing */
+  }
+    
+  .coursehero2 {
+    background-color: #FFF078;
+    padding: 60px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    height: 200px;
+    width: 150px;
+    text-align: center;
+    margin: 10px; /* Add margin for spacing */
+  }
+  
+    
+  .coursehero3 {
+    background-color: #9f8dfd;
+    color: white;
+    padding: 60px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    margin: 10px; /* Add margin for spacing */
+  }
+  
+    
+  .coursehero4 {
+    background-color: #F7FAFC;
+    padding: 70px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    margin: 10px; /* Add margin for spacing */
+  }
+  
+  

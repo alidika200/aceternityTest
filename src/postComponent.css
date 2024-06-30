@@ -1,87 +1,107 @@
 .postCard {
-    width: 550px;
-    margin-top: 20px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .postContent {
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px; /* Add space between each review */
-  }
-  
-  .postHeader {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 10px; /* Space between image and text */
-    margin-bottom: 10px; /* Add space between header and text */
-  }
-  
-  .postImageUser {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%; /* Make the image circular */
-  }
+  width: 550px;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 
-  .userName  {
-    color: black;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  .userName a:visited {
-    color: black;
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  .postText {
-    margin: 10px 0; /* Add some space around the text */
-  }
-  
-  .postMedia {
-    margin-top: 10px;
-  }
-  
-  .postMedia img, .postMedia video {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
+.postContent {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 
-  .ratePost {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-  }
-  
-  button.upPost,
-  button.downPost {
-    color: #fff;
-    width: 60px;
-    height: 40px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 15px;
- 
-    margin-right: 10px;
-  } 
-  button.postOps {
-    color:#fff;
-    width: 90px;
-    height: 40px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 15px;
-  }
+.postHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 
+.postImageUser {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
 
-  
+.userName {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.userName a:visited {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.postText {
+  margin: 10px 0;
+}
+
+.postMedia {
+  margin-top: 10px;
+}
+
+.postMedia img,
+.postMedia video {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.ratePost {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+button.upPost,
+button.downPost {
+  color: #fff;
+  width: 60px;
+  height: 40px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+button.postOps {
+  color: #fff;
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.commentSection {
+  margin-top: 20px;
+}
+
+.commentInput {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.commentSubmit {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

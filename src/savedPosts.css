@@ -1,0 +1,35 @@
+.feed {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:rgba(35, 3, 99, 0.452);
+    min-height: 600px; 
+    width: 100vw;  
+    }
+  
+   
+    .posts{
+      margin-top: 60px;
+      margin-left: 430px;
+    }
+    
+    .upper-nav-bar {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+    
+    .upper-nav-bar button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    .upper-nav-bar button:hover {
+      color: #007BFF;
+    }
+    
